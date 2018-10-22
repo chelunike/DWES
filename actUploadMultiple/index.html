@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Upload Multiple</title>
+    
+    <style type="text/css">
+    
+        body { width: 80%; margin: 0 auto; background-color: #ddd;}
+        .entrada { display: block; margin: 5px 5px; padding: .25em; 
+            border: none; outline: none; background-color: transparent;
+            border-bottom: 3px solid #333;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Upload Multiple Files</h1>
+    </header>
+    <section class='form'>
+        <form action="page2.php" enctype="multipart/form-data" method="post">
+            <label>Nombre Archivo: </label>
+            <input type="text" class="entrada" name="nombre" value="archivo" required/>
+            
+            <label>Tamaño máximo del archivo: </label>
+            <input type="number" class="entrada" name="maxSize" value="1024" min="1" required/>
+            
+            <label>Tipo de archivo: </label>
+            <select name="type" selected="Undefined" class="entrada">
+                <option value='none'>Undefined</option>
+                <option value='image'>Imagen</option>
+                <option value='text'>Texto Plano</option>
+                <option value='pdf'>PDF</option>
+                <option value='none'>Patatas</option>
+                <option value='none'>Lo que sea</option>
+            </select>
+            
+            <label>Tipo de operacion: </label>
+            <select name="policy" selected="1" class="entrada">
+                <option value='1'>Policy Keep</option>
+                <option value='2'>Policy Rename</option>
+                <option value='3'>Policy Overwrite</option>
+            </select>
+            
+            <label>Fichero: </label>
+            <input type="file" class="entrada" name="fichero[]" multiple required/>
+            
+            <input type="submit" value="Submit"/>
+        </form>
+    </section>
+</body>
+</html>
