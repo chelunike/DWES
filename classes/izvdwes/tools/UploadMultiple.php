@@ -69,9 +69,6 @@ class UploadMultiple {
     }
     
     // Metodos (reciclados por mi compromiso con el medio ambiente :)
-    
-    
-    // --- En Construccion ---
     function uploadAll() {
         $result = 0;
         if($this->error !== 1) {
@@ -99,7 +96,6 @@ class UploadMultiple {
     }
     
     // Upload aislados
-    
     private function __doUpload($index) {
         $result = false;
         switch($this->policy){
