@@ -31,4 +31,4 @@ if($nombre !== null && $fichero->getError() === 0) {
 
 // Estaria bien devolver que operacion se ha realizado
 $url = 'index.php?result=' . $resultado;
-//header('Location: ' . $url);
+header('Location: ' . $url);
