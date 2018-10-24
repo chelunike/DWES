@@ -2,7 +2,7 @@
 require '../clases/Autoload.php';
 
 // Lugar donde se almacenan las fotos -- OJO!!
-$path = '../../../../privado/';
+$path = App::PATH;
 
 
 // Comprobamos los mensajes

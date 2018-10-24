@@ -1,7 +1,7 @@
 <?php
 require '../clases/Autoload.php';
 // Ruta del archivo -- OJO!!
-$path = '../../../../privado/';
+$path = App::PATH;
 
 // Resultado por defecto
 $resultado = -1;

@@ -55,8 +55,7 @@
     $upload->setPolicy($policy);
     
     
-    $upload->setTarget('upload/');
-    //$upload->setTarget('../../../../privado/');
+    $upload->setTarget(App::PATH);
     
     //$upload->setPolicy(UploadMultiple::POLICY_KEEP);
     //$upload->setPolicy(UploadMultiple::POLICY_RENAME);
