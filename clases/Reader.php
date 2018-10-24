@@ -1,15 +1,14 @@
 <?php
-namespace izvdwes\tools;
+
 
 /**
+ * Leer peticiones
+ *
  * @author yo
  */
 class Reader {
     
-    
-    
-    private function _construct(){
-    }
+    private function _construct() {}
     
     //Metodos
     /**
@@ -19,29 +18,7 @@ class Reader {
     static function get($name){
         return self::_read($name, $_GET);
     }
-    /*
-    static function get($name){
-        if(isset($_GET[$name])){
-            return $_GET[$name];
-        }
-        return null;
-    }
-     Version Uni
-    static function get($name){
-        $result = null;
-        if(isset($_GET[$name])){
-            $result = $_GET[$name];
-        }
-        return $result;
-    }
-    static function get($name, $array = $_GET){
-        if(isset($array[$name])){
-            return $array[$name];
-        }
-        return null;
-    }
-    */
-    
+
     /**
      *  Si no me llegua el parametro con el nombre 
      * @return null En caso de nada 
@@ -49,29 +26,7 @@ class Reader {
     static function post($name){
         return self::_read($name, $_POST);
     }
-    /*
-    static function post($name){
-        if(isset($_POST[$name])){
-            return $_POST[$name];
-        }
-        return null;
-    }
-    /* Version Uni
-    static function post($name){
-        $result = null;
-        if(isset($_POST[$name])){
-            $result = $_POST[$name];
-        }
-        return $result;
-    }
-    static function post($name, array $array = $_POST){
-        if(isset($array[$name])){
-            return $array[$name];
-        }
-        return null;
-    }
-    */
-    
+
     function read($name){
         $result = self::get($name);
         if($result === null){

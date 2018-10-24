@@ -1,27 +1,5 @@
 <?php
 
-namespace izvdwes\tools;
-/*
-    Upload Multiple
-    
-    Subir varios archivos (Controlados por indices)
-    
-    Metodos Especiales
-     - Count
-     - resto basado en indice
-    
-    Funcionamiento
-     - Salida de datos por numero (resultado)
-     - Salida de nombre en arrays
-    -- Politicas
-        keep mantiene los que halla
-        overwrite sobrescrive todos
-        rename cambia el nombre
-         - El nombre el caso de que halla de enumera
-    
-     - Y ponerse a ello :)
-*/
-
 /**
  * Subida de multiples archivos
  * Nueva implementacion del Upload
@@ -30,6 +8,7 @@ namespace izvdwes\tools;
  *  - Nuevos parametros index
  *  - Nuevo bucle
  * 
+ * @author yo
  */
 class UploadMultiple {
     // Constantes

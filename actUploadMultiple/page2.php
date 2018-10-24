@@ -24,11 +24,7 @@
     // Cojemos las herramientas de la fragoneta
     //require 'classes/...';
     // o podemos enviar al aprendiz a por ellas :)<-<
-    require '../classes/Autoload.php';
-
-    use izvdwes\tools\Tools;
-    use izvdwes\tools\Reader;
-    use izvdwes\tools\UploadMultiple;
+    require '../clases/Autoload.php';
     
     // Nos ponemos a trabajar
     //Tools::print('A ver lo que ha llegado');
