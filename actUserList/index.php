@@ -56,6 +56,7 @@ if($result !== null && is_numeric($result)) {
             ?>
         </ul>
         <?php echo $mensaje; ?>
+        <?php echo '<pre>' . var_export(scandir($path), true) . '</pre>'; ?>
     </section>
     <section id="profile">
         <?php
