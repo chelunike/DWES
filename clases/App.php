@@ -15,6 +15,6 @@ class App {
 	/**
 	 *  Some test variables
 	 */
-	const PATH = ../../workzone;
+	const PATH = '../../workzone';
 
 }
