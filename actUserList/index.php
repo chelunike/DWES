@@ -22,8 +22,6 @@ if($result !== null && is_numeric($result)) {
                 '</div>';
     }
 }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +65,7 @@ if($result !== null && is_numeric($result)) {
                 $imgData = base64_encode(file_get_contents($img_file));
                 // Format the image SRC:  data:{mime};base64,{data};
                 $src = 'data: '.mime_content_type($img_file).';base64,'.$imgData;
-        ?>
+            ?>
         <h2>Usuario: <?= $nombre ?></h2>
         <img src="<?= $src ?>"></img>
         <?php        

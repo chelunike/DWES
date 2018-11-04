@@ -1,0 +1,343 @@
+[25-Oct-2018 07:04:12 UTC] PHP Warning:  require(../../classes/Autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/server/proyecto/producto/index.php on line 6
+[25-Oct-2018 07:04:12 UTC] PHP Fatal error:  require(): Failed opening required '../../classes/Autoload.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/server/proyecto/producto/index.php on line 6
+[25-Oct-2018 07:04:31 UTC] PHP Warning:  require(../classes/Autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/server/proyecto/producto/index.php on line 6
+[25-Oct-2018 07:04:31 UTC] PHP Fatal error:  require(): Failed opening required '../classes/Autoload.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/server/proyecto/producto/index.php on line 6
+[25-Oct-2018 07:04:43 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\database\PDO' not found in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(10): izv\database\Database->connect()
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 36
+[25-Oct-2018 07:05:27 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\database\PDO' not found in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(10): izv\database\Database->connect()
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 36
+[25-Oct-2018 07:05:54 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\database\PDO' not found in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(9): izv\database\Database->connect()
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 36
+[25-Oct-2018 07:06:16 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\database\PDO' not found in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(9): izv\database\Database->connect()
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 36
+[25-Oct-2018 07:07:46 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\database\PDO' not found in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(9): izv\database\Database->connect()
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 41
+[25-Oct-2018 07:08:05 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\database\PDO' not found in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(9): izv\database\Database->connect()
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 41
+[25-Oct-2018 07:08:10 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\database\PDO' not found in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(9): izv\database\Database->connect()
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 41
+[25-Oct-2018 07:08:23 UTC] PHP Notice:  Undefined variable: conexion in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 54
+[25-Oct-2018 07:08:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php:54
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(13): izv\database\Database->execute('select * from p...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 54
+[25-Oct-2018 07:09:01 UTC] PHP Notice:  Undefined variable: conexion in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 54
+[25-Oct-2018 07:09:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php:54
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(13): izv\database\Database->execute('select * from p...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 54
+[25-Oct-2018 07:09:55 UTC] PHP Notice:  Undefined variable: connection in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 54
+[25-Oct-2018 07:09:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php:54
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(13): izv\database\Database->execute('select * from p...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 54
+[25-Oct-2018 07:10:15 UTC] PHP Notice:  Undefined variable: sentence in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[25-Oct-2018 07:10:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on null in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php:58
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(13): izv\database\Database->execute('select * from p...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[25-Oct-2018 07:10:33 UTC] PHP Fatal error:  Uncaught Error: Class 'Reader' not found in /home/ubuntu/workspace/server/proyecto/producto/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/index.php on line 20
+[25-Oct-2018 07:17:11 UTC] PHP Notice:  Undefined variable: sentencia in /home/ubuntu/workspace/server/proyecto/producto/index.php on line 78
+[25-Oct-2018 07:17:11 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on null in /home/ubuntu/workspace/server/proyecto/producto/index.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/index.php on line 78
+[25-Oct-2018 07:18:11 UTC] PHP Fatal error:  Uncaught Error: Class 'Producto' not found in /home/ubuntu/workspace/server/proyecto/producto/index.php:79
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/index.php on line 79
+[25-Oct-2018 07:18:32 UTC] PHP Fatal error:  Trait 'izv\common' not found in /home/ubuntu/workspace/server/proyecto/classes/izv/data/Producto.php on line 9
+[25-Oct-2018 07:18:53 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\data\Producto' not found in /home/ubuntu/workspace/server/proyecto/producto/index.php:80
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/index.php on line 80
+[25-Oct-2018 07:19:47 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\data\Producto' not found in /home/ubuntu/workspace/server/proyecto/producto/index.php:80
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/index.php on line 80
+[25-Oct-2018 08:18:41 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to izv\manager\ManageProducto::__construct() must be an instance of izv\manager\Database, instance of izv\database\Database given, called in /home/ubuntu/workspace/server/proyecto/producto/index.php on line 11 and defined in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(11): izv\manager\ManageProducto->__construct(Object(izv\database\Database))
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php on line 14
+[25-Oct-2018 08:19:56 UTC] PHP Notice:  Undefined variable: db in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php on line 92
+[25-Oct-2018 08:19:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on null in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php:92
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(13): izv\manager\ManageProducto->getAll()
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php on line 92
+[26-Oct-2018 08:27:36 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php:54
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php(92): izv\database\Database->execute('select * from  ...')
+#1 /home/ubuntu/workspace/server/proyecto/producto/index.php(13): izv\manager\ManageProducto->getAll()
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 54
+[26-Oct-2018 08:27:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php:54
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php(92): izv\database\Database->execute('select * from  ...')
+#1 /home/ubuntu/workspace/server/proyecto/producto/index.php(13): izv\manager\ManageProducto->getAll()
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 54
+[26-Oct-2018 08:29:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php:54
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php(92): izv\database\Database->execute('select * from  ...')
+#1 /home/ubuntu/workspace/server/proyecto/producto/index.php(13): izv\manager\ManageProducto->getAll()
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 54
+[26-Oct-2018 08:31:18 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 08:31:30 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 08:31:39 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 08:32:16 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 08:32:51 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 08:33:26 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 08:33:41 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 08:34:35 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 08:35:12 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\manager\Producto' not found in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php:95
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(13): izv\manager\ManageProducto->getAll()
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php on line 95
+[26-Oct-2018 09:02:39 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to izv\manager\ManageProducto::add() must be an instance of izv\data\Producto, null given, called in /home/ubuntu/workspace/server/proyecto/producto/doinsert.php on line 23 and defined in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/doinsert.php(23): izv\manager\ManageProducto->add(NULL)
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php on line 27
+[26-Oct-2018 09:04:22 UTC] PHP Parse error:  syntax error, unexpected 'exit' (T_EXIT) in /home/ubuntu/workspace/server/proyecto/producto/doinsert.php on line 20
+[26-Oct-2018 09:56:29 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 09:57:28 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 09:58:05 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 09:58:20 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 09:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::lastInsertId() in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php:34
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/doinsert.php(23): izv\manager\ManageProducto->add(Object(izv\data\Producto))
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php on line 34
+[26-Oct-2018 10:01:23 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 10:01:48 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 10:01:55 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 10:03:54 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 10:04:04 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 10:04:09 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 10:04:32 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 10:04:38 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 10:04:54 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[26-Oct-2018 10:05:30 UTC] PHP Notice:  Undefined variable: producto in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php on line 32
+[26-Oct-2018 10:05:30 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getNombre() on null in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php:32
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/doinsert.php(23): izv\manager\ManageProducto->add(Object(izv\data\Producto))
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php on line 32
+[26-Oct-2018 10:05:40 UTC] PHP Notice:  Undefined variable: p in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php on line 29
+[26-Oct-2018 10:05:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::lastInsertId() in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php:37
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/doinsert.php(23): izv\manager\ManageProducto->add(Object(izv\data\Producto))
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php on line 37
+[26-Oct-2018 10:06:32 UTC] PHP Notice:  Undefined property: izv\database\Database::$getConnection in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php on line 37
+[26-Oct-2018 10:06:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function lastInsertId() on null in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php:37
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/doinsert.php(23): izv\manager\ManageProducto->add(Object(izv\data\Producto))
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php on line 37
+[26-Oct-2018 11:04:29 UTC] PHP Fatal error:  Uncaught Error: Class 'Alert' not found in /home/ubuntu/workspace/server/proyecto/producto/index.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/index.php on line 18
+[26-Oct-2018 11:04:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method izv\tools\Alert::getAlertP() in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php:57
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/index.php(19): izv\tools\Alert::getMessage('insertproducto', NULL)
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 57
+[26-Oct-2018 11:05:24 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$resultado in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 43
+[26-Oct-2018 11:05:24 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$operacion in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 47
+[26-Oct-2018 12:15:04 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$resultado in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 43
+[26-Oct-2018 12:15:04 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$operacion in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 47
+[26-Oct-2018 12:15:16 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$resultado in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 43
+[26-Oct-2018 12:15:16 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$operacion in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 47
+[26-Oct-2018 12:15:39 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$resultado in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 43
+[26-Oct-2018 12:15:39 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$operacion in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 47
+[26-Oct-2018 12:16:18 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$resultado in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 43
+[26-Oct-2018 12:16:18 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$operacion in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 47
+[27-Oct-2018 09:13:15 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$resultado in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 43
+[27-Oct-2018 09:13:15 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$operacion in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 47
+[27-Oct-2018 09:29:07 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$resultado in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 47
+[27-Oct-2018 09:29:07 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$operacion in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 51
+[27-Oct-2018 09:29:14 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$resultado in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 47
+[27-Oct-2018 09:29:14 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$operacion in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 51
+[27-Oct-2018 09:35:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/server/proyecto/producto/dodelete.php on line 26
+[27-Oct-2018 09:35:37 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$resultado in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 47
+[27-Oct-2018 09:35:37 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$operacion in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 51
+[27-Oct-2018 09:36:14 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$resultado in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 47
+[27-Oct-2018 09:36:14 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$operacion in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 51
+[27-Oct-2018 09:37:18 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$resultado in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 47
+[27-Oct-2018 09:37:56 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$result in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 47
+[27-Oct-2018 09:38:06 UTC] PHP Notice:  Undefined property: izv\tools\Alert::$result in /home/ubuntu/workspace/server/proyecto/classes/izv/tools/Alert.php on line 47
+[27-Oct-2018 09:39:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/server/proyecto/producto/dodelete.php on line 26
+[27-Oct-2018 09:40:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method izv\tools\Reader::readArray() in /home/ubuntu/workspace/server/proyecto/producto/dodelete.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/dodelete.php on line 18
+[27-Oct-2018 09:44:15 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\tools\Reader' not found in /home/ubuntu/workspace/server/proyecto/producto/dodelete.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/dodelete.php on line 17
+[27-Oct-2018 09:45:06 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\tools\Reader' not found in /home/ubuntu/workspace/server/proyecto/producto/dodelete.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/dodelete.php on line 17
+[30-Oct-2018 09:36:02 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: Columns/Parameters are 1-based in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 56
+[30-Oct-2018 09:36:02 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[30-Oct-2018 09:36:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getNombre() on null in /home/ubuntu/workspace/server/proyecto/producto/edit.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/edit.php on line 61
+[30-Oct-2018 09:36:50 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: Columns/Parameters are 1-based in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 56
+[30-Oct-2018 09:36:50 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[30-Oct-2018 09:36:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getNombre() on null in /home/ubuntu/workspace/server/proyecto/producto/edit.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/edit.php on line 61
+[30-Oct-2018 09:36:53 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: Columns/Parameters are 1-based in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 56
+[30-Oct-2018 09:36:53 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[30-Oct-2018 09:36:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getNombre() on null in /home/ubuntu/workspace/server/proyecto/producto/edit.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/edit.php on line 61
+[30-Oct-2018 09:37:57 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: Columns/Parameters are 1-based in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 56
+[30-Oct-2018 09:37:57 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[30-Oct-2018 09:37:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getNombre() on null in /home/ubuntu/workspace/server/proyecto/producto/edit.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/edit.php on line 61
+[30-Oct-2018 09:38:07 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: Columns/Parameters are 1-based in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 56
+[30-Oct-2018 09:38:07 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[30-Oct-2018 09:38:07 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getNombre() on null in /home/ubuntu/workspace/server/proyecto/producto/edit.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/edit.php on line 61
+[30-Oct-2018 09:39:09 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: Columns/Parameters are 1-based in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 56
+[30-Oct-2018 09:39:09 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[30-Oct-2018 09:39:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getNombre() on null in /home/ubuntu/workspace/server/proyecto/producto/edit.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/edit.php on line 61
+[30-Oct-2018 09:40:42 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: Columns/Parameters are 1-based in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 56
+[30-Oct-2018 09:40:42 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[30-Oct-2018 09:40:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getNombre() on null in /home/ubuntu/workspace/server/proyecto/producto/edit.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/edit.php on line 61
+[30-Oct-2018 09:41:15 UTC] PHP Warning:  PDOStatement::bindValue(): SQLSTATE[HY093]: Invalid parameter number: Columns/Parameters are 1-based in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 56
+[30-Oct-2018 09:41:15 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[30-Oct-2018 09:41:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getNombre() on null in /home/ubuntu/workspace/server/proyecto/producto/edit.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/edit.php on line 61
+[30-Oct-2018 09:49:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method izv\database\Database::get() in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php:50
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/producto/doedit.php(25): izv\manager\ManageProducto->edit(Object(izv\data\Producto))
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageProducto.php on line 50
+[30-Oct-2018 11:10:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function beginTransaction() on null in /home/ubuntu/workspace/server/proyecto/producto/dodelete.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/producto/dodelete.php on line 26
+[03-Nov-2018 20:17:42 UTC] PHP Fatal error:  Uncaught Error: Class 'ManageUsuairo' not found in /home/ubuntu/workspace/server/proyecto/usuario/index.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/usuario/index.php on line 12
+[03-Nov-2018 20:18:18 UTC] PHP Fatal error:  Uncaught Error: Class 'ManagerUsuairo' not found in /home/ubuntu/workspace/server/proyecto/usuario/index.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/usuario/index.php on line 12
+[03-Nov-2018 20:18:28 UTC] PHP Fatal error:  Uncaught Error: Class 'ManagerUsuairo' not found in /home/ubuntu/workspace/server/proyecto/usuario/index.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/usuario/index.php on line 12
+[03-Nov-2018 20:19:03 UTC] PHP Warning:  require(../classes/Autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/server/proyecto/usuario/index.php on line 2
+[03-Nov-2018 20:19:03 UTC] PHP Fatal error:  require(): Failed opening required '../classes/Autoload.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/server/proyecto/usuario/index.php on line 2
+[03-Nov-2018 20:19:19 UTC] PHP Fatal error:  Uncaught Error: Class 'ManagerUsuairo' not found in /home/ubuntu/workspace/server/proyecto/usuario/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/usuario/index.php on line 13
+[03-Nov-2018 20:19:42 UTC] PHP Fatal error:  Uncaught Error: Class 'ManagerUsuario' not found in /home/ubuntu/workspace/server/proyecto/usuario/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/usuario/index.php on line 13
+[03-Nov-2018 20:20:25 UTC] PHP Fatal error:  Uncaught Error: Class 'ManagerUsuario' not found in /home/ubuntu/workspace/server/proyecto/usuario/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/usuario/index.php on line 13
+[03-Nov-2018 20:20:34 UTC] PHP Fatal error:  Uncaught Error: Class 'ManagerUsuario' not found in /home/ubuntu/workspace/server/proyecto/usuario/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/usuario/index.php on line 13
+[03-Nov-2018 20:20:58 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\manager\ManagerUsuario' not found in /home/ubuntu/workspace/server/proyecto/usuario/index.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/usuario/index.php on line 12
+[03-Nov-2018 20:21:28 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\manager\ManageUsuario' not found in /home/ubuntu/workspace/server/proyecto/usuario/insert.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/usuario/insert.php on line 11
+[03-Nov-2018 20:22:14 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\manager\ManageUsuario' not found in /home/ubuntu/workspace/server/proyecto/usuario/insert.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/usuario/insert.php on line 11
+[04-Nov-2018 10:37:49 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\manager\Manageusuario' not found in /home/ubuntu/workspace/server/proyecto/usuario/edit.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/usuario/edit.php on line 19
+[04-Nov-2018 10:41:26 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[04-Nov-2018 10:42:47 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[04-Nov-2018 10:44:40 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[04-Nov-2018 10:44:43 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[04-Nov-2018 10:45:15 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[04-Nov-2018 10:46:23 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[04-Nov-2018 10:50:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::getError() in /home/ubuntu/workspace/server/proyecto/usuario/doedit.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/usuario/doedit.php on line 31
+[04-Nov-2018 10:50:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::getMessageError() in /home/ubuntu/workspace/server/proyecto/usuario/doedit.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/usuario/doedit.php on line 31
+[04-Nov-2018 10:50:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::getSentence() in /home/ubuntu/workspace/server/proyecto/usuario/doedit.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/usuario/doedit.php on line 31
+[04-Nov-2018 10:58:03 UTC] PHP Fatal error:  Uncaught Error: Call to a member function pop() on array in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageUsuario.php:53
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyecto/usuario/doedit.php(27): izv\manager\ManageUsuario->edit(Object(izv\data\Usuario))
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyecto/classes/izv/manager/ManageUsuario.php on line 53
+[04-Nov-2018 10:59:00 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
+[04-Nov-2018 11:03:47 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/server/proyecto/classes/izv/database/Database.php on line 58
