@@ -21,7 +21,7 @@ create table usuario (
     alias varchar(255) not null unique,
     nombre varchar(255) not null,
     clave varchar(255) not null,
-    activo boolean not null,
+    activo boolean not null default 0,
     fechaalta TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) engine = innodb
   character set utf8

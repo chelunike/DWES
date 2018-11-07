@@ -108,9 +108,9 @@ $alert = Alert::getMessage($op, $resultado);
                                     <td scope="row"><?php echo $usuario->getCorreo(); ?></td>
                                     <td scope="row"><?php echo $usuario->getAlias(); ?></td>
                                     <td scope="row"><?= $usuario->getNombre() ?></td>
-                                    <td scope="row"><?php echo $usuario->getClave(); ?></td>
-                                    <td scope="row"><?php echo $usuario->getActivo(); ?></td>
-                                    <td scope="row"><?php echo $usuario->getFechaalta(); ?></td>
+                                    <td scope="row"><?= $usuario->getClave() ?></td>
+                                    <td scope="row"><?= $usuario->getActivo()?'True':'False' ?></td>
+                                    <td scope="row"><?= $usuario->getFechaalta() ?></td>
                                     <td scope="row"><a href="edit.php?id=<?= $usuario->getId() ?>" class="editar">Editar</a></td>
                                     <td scope="row"><a href="dodelete.php?id=<?= $usuario->getId() ?>" class="borrar">Borrar</a></td>
                                     <!--<td scope="row"><a href="dodelete.php?id=<?= $usuario->getId()?>" class="borrar">Borrar</a></td>-->

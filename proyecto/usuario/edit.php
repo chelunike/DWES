@@ -87,7 +87,7 @@ if($usuario === null) {
                             <small id="alias" class="form-text text-muted">Una clave difisil :)</small>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="activo" id="activo"  value="<?= $usuario->getActivo()?0:1 ?>" >
+                            <input type="checkbox" class="form-check-input" name="activo" id="activo" <?= $usuario->getActivo()?'checked':'' ?>>
                             <label class="form-check-label" for="activo">Activo</label>
                         </div>
                       <button type="submit" class="btn btn-primary">Editar</button>
