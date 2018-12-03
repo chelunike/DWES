@@ -53,7 +53,7 @@ $data = array('title' => 'Patata',
                 'alert' => $alert);
 
 // Renderizado
-if($usuario->getAdministrador()) {
+if($id !== null  &&  $usuario->getAdministrador()) {
     echo $twig->render('editRoot.twig', $data);
 } else {
     echo $twig->render('editSelf.twig', $data);

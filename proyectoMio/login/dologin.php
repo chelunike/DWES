@@ -14,10 +14,10 @@ require '../classes/autoload.php';
 $user = Reader::read('correo');
 $clave = Reader::read('clave');
 
-$db = new Database();
-$manager = new ManageUsuario($db);
-
-$login = $manager->login($user ,$clave);
+// Sin Doctrine
+//$db = new Database();
+//$manager = new ManageUsuario($db);
+//$login = $manager->login($user ,$clave);
 
 // - Login con doctrine
 require '../classes/config/doctrine.php';

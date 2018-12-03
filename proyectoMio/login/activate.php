@@ -23,7 +23,8 @@ if($code !== null) {
     $usuario = null;
     // Obtain id
     $key = Tools::encryptJWT(App::CODE, App::JWT_CODE);
-    echo substr_compare($code, $key, 0);
+    
+    //echo substr_compare($code, $key, 0);
     if(substr_compare($code, $key, 0)) {
         $id = Tools::decryptJWT(substr($code, strlen($key)), App::JWT_CODE);
         

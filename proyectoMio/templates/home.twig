@@ -1,5 +1,55 @@
 {% extends 'bootstrap.twig' %}
 
+{% block head %}
+<style>
+.cubo { margin: 200px 200px; position: fixed; }
+
+.lado{
+	width: 200px; height: 200px;
+	position: absolute;
+	border: 1.7px dashed white;
+	opacity: .8;
+	text-align: center;
+	padding: 50px 0;
+	font-size: 2em;
+}
+
+#superior { background-color: cyan;}
+#frente { background-color: magenta;}
+#derecha { background-color: yellow;}
+#izquierda { background-color: red;}
+#atras { background-color: orange; }
+#inferior { background-color: lightgreen; }
+
+.cubo {
+	transform-style: preserve-3d;
+	transform: perspective(800px);
+}
+
+/* Rotar las caras para que encajen */
+#superior { transform: rotateX(90deg) translateZ(100px); }
+#frente { transform:  translateZ(100px);}
+#derecha { transform: rotateY(90deg) translateZ(100px);}
+#izquierda { transform: rotateY(90deg) translateZ(-100px);}
+#atras { transform: rotateX(90deg) translateZ(-100px); }
+#inferior { transform: rotateX(360deg) translateZ(-100px); }
+
+/* Animacion */
+@keyframes girar {
+	from { transform: rotateX(0deg) rotateZ(0deg);	}
+	to { transform: rotateX(360deg) rotateZ(360deg)	}
+}
+
+@keyframes girar2 {
+	from { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);	}
+	to { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+.cubo {	animation: girar2 3s infinite ease-in-out; }
+.cubo:hover { animation-play-state: paused; }
+</style>
+{% endblock %}
+
 {% block nav_items %}
 <li class="nav-item">
     <a class="nav-link" href="usuario/">Usuario</a>
@@ -73,6 +123,16 @@ Copia el codigo que quieras, me da igual igual igual. Y no se que decirte mas.</
    / \     / \            \ /       \ /                  ______|______|________                     \\___________________________// 
 
 </pre></marquee></code>
+<div>
+    <div class="cubo">
+		<div id="superior" class="lado"></div>
+		<div id="frente" class="lado"></div>
+		<div id="derecha" class="lado"></div>
+		<div id="izquierda" class="lado"></div>
+		<div id="atras" class="lado"></div>
+		<div id="inferior" class="lado"></div>
+	</div>
+</div>
 <!--<ul id="lista">
     { % for item in lista % }
         <li>
