@@ -1,0 +1,173 @@
+Notas:
+
+ - Lo apuntao de ese dia - 
+Hacer una pequeña aplicacion con la tabla usuario
+y meter un campo administrador 0 o 1
+
+Si eres administrador puede hacer lo que le de la gana 
+
+Si no te logeas puedes ver el listado de usuarios (nombre correro y alias)
+
+No administrador (puedes hacer tus cosas)
+Cambiar su correro con activacion de nuevo
+Cambiar clave verificando la anterior
+Puede darse de baja temporal o definitiva
+
+En un proyecto nuevo
+Pues claro :) 
+
+- Pagina Principal:
+    Home / Login
+- Pagina de Usuarios bulgaris
+    Lista de usuarios basica(sin editar)
+    Editarse a si mismo
+    
+- Pagina de Administradores
+    Lista de usuarios para hacer lo que quiera
+
+- SQL
+
+use nombrebd
+create table usuario (
+    id bigint auto_increment primary key,
+    correo varchar(255) not null unique,
+    alias varchar(255) not null unique,
+    nombre varchar(255) not null,
+    clave varchar(255) not null,
+    activo boolean not null default 0,
+    fechaalta TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    administrador boolean not null default 0
+) engine = innodb
+  character set utf8
+  collate utf8_general_ci;
+
+Composer Commands
+composer require google/apiclient
+composer require phpmailer/phpmailer
+composer require twig/twig
+composer require doctrine/orm
+
+Uso de plantillas Twig
+    - Plantilla padre
+        bootstrap
+    - Plantilla hijas:
+        home
+        tablaBasica
+        tablaRoot
+        formularios:
+            register
+            insertRoot
+            editSelf
+            editRoot
+
+Uso de ORM (Object Relational Mapping) Doctrine
+Documentacion: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/tutorials/getting-started.html
+1º - Crear doctrine.php (Donde insertamos los datos de conexion)
+2º - Crear cli-config.php 
+
+3º - Crear en la carpeta de las clases las clases
+Ejemplo:
+/**
+ * @Entity @Table(name="nombreTabla en SQL")
+ **/
+class Algo {
+/**
+ * @Id
+ * @Column(type="bigint") @GeneratedValue
+ */
+private $id; 
+/**
+ * @Column(type="string", length=255, unique=true, nullable=false)
+ */
+private $cadena;
+
+/**
+ * @Column(type="boolean", length=255, unique=false, nullable=false)
+ */
+private $boolean;
+/**
+ * @Column(type="datetime", unique=false, nullable=false, columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+ */
+private $fecha;
+}
+
+Documentacion: https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/basic-mapping.html
+
+- Comandos: (Desde la carpeta doctrine)
+Siempre debemos situarnos en la carpeta en la que estén los archivos bootstrap.php y cli-config.php.
+Dentro de esta carpeta tendremos una carpeta 'src' en la que definimos las clases.
+Desde esta carpeta ejecutaremos doctrine, para lo cual tendremos que introducir la ruta hasta llegar a él.
+
+vendor/doctrine/orm/bin/doctrine orm:schema-tool:create
+vendor/doctrine/orm/bin/doctrine orm:generate:entities config/src
+
+- Crear las tablas:
+    shell> .../vendor/bin/doctrine orm:schema-tool:create
+
+    Borrar las tablas:
+    shell> .../vendor/bin/doctrine orm:schema-tool:drop --force
+
+    Modificar las tablas:
+    shell> .../vendor/bin/doctrine orm:schema-tool:update --force
+
+ --- --- -=============- --- --
+ --- --- USO de DOCTRINE --- ---
+ --- --- _______________ --- ---
+
+- 1º Los requires
+require 'config/bootstrap.php';
+require 'classes/src/Punto.php';
+
+// Objeto de ejemplo
+$obj = new Object();
+
+$obj->set(0); .... // los sets
+
+// - INSERTAR en la tabla - Persistir los objetos
+$entityManager->persist($obj);
+$entityManager->flush();
+
+// Listado/Select de objetos
+$repositorioObj = $entityManager->getRepository('NombreObjeto');
+$lista = $repositorioObj->findAll();
+
+foreach ($lista as $item) {
+    echo $item->getAlgo() . '<br>';
+}
+
+// Sacarlos/Get por id
+$id = 1;
+$objFind = $entityManager->find('NombreObjeto', $id);
+
+// Sacar/Get por condicion (uno, varios)
+// Sacar uno solo findOneBy
+$obj = $entityManager->getRepository('Registro')
+                          ->findOneBy(array('token' => 'valor'));
+// Sacar todos findBy
+$listaObj = $entityManager->getRepository('Registro')
+                           ->findBy(array('email' => 'email@email.es', 'phone' => '958123456'));
+
+// Edit or update // En caso chema Editar o Actualizar
+$id = 1;
+$obj = $entityManager->find('NombreObjeto', $id);
+// ... Se modifica
+// Y se aplican los cambios
+$entityManager->flush();//commit
+
+// Delete or remove
+$id = 1;
+$obj = $entityManager->find('NombreObjeto', $id);
+$entityManager->remove($obj);//borro provisional
+$entityManager->flush();//definitivo se aplica a la tabla
+
+// Select or query (sql, dql) Seleccionar por codigo
+$dql = 'select r FROM Registro r where r.email = :email or r.phone = :phone order by r.id desc';
+//Sacamos la sentencia
+$query = $entityManager->createQuery($dql);
+
+$query->setParameter('email', trim($_GET['email']));
+$query->setParameter('phone', 'new phone');
+
+$listaObj = $query->getResult();
+
+// Y ya haces lo que quieres

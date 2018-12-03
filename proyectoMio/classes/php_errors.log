@@ -1,0 +1,2 @@
+[24-Nov-2018 18:10:16 UTC] PHP Warning:  require(../classes/vendor/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/server/proyectoMio/classes/doctrine/bootstrap.php on line 3
+[24-Nov-2018 18:10:16 UTC] PHP Fatal error:  require(): Failed opening required '../classes/vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/server/proyectoMio/classes/doctrine/bootstrap.php on line 3

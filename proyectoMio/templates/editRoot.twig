@@ -1,0 +1,62 @@
+{% extends 'bootstrap.twig' %}
+
+{% block nav_items %}
+<li class="nav-item">
+    <a class="nav-link" href="index.php">Usuario</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link disabled" href="edit.php">Configuracion</a>
+</li>
+{% endblock %}
+
+{% block jumbotron %}
+<h4 class="display-4">Administrar Usuario :)</h4>
+<p>Haz lo que quieras</p>
+
+{% endblock %}
+
+{% block contenido_principal %}
+<h2>Editar</h2>
+<div class="form-group">
+	<div class="form-group">
+		<form action="doedit.php" method="post">
+            <input type="hidden" name="id" id="id" class="form-control" value="{{ usuario.id }}"/>
+            <div class="form-group">
+                <label for="correo">Correo</label>
+                <input type="text" name="correo" id="correo" class="form-control" placeholder="Enter correo" value="{{ usuario.correo }}" required/>
+                <small id="correo" class="form-text text-muted">Un correo unico e irrepetible</small>
+            </div>
+            <div class="form-group">
+                <label for="alias">Alias</label>
+                <input type="text" name="alias" id="alias" class="form-control" placeholder="Enter alias"  value="{{ usuario.alias }}" required/>
+                <small id="alias" class="form-text text-muted">Un alias bonito</small>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Enter nombre"  value="{{ usuario.nombre }}" required/>
+                <small id="nombre" class="form-text text-muted">Un nombre mas bonito aun</small>
+            </div>
+            <div class="form-group">
+                <label for="clave">Clave</label>
+                <input type="password" name="clave" id="clave" class="form-control" placeholder="Enter clave" />
+                <small id="alias" class="form-text text-muted">Una clave difisil :)</small>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="activo" id="activo" value="1" 
+                {% if usuario.activo %}
+                    checked
+                {% endif %}/>
+                <label class="form-check-label" for="activo">Activo</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="administrador" id="administrador"  value="1"
+                {% if usuario.administrador %}
+                    checked
+                {% endif %}/>
+                <label class="form-check-label" for="activo">Administrador</label>
+            </div>
+          <button type="submit" class="btn btn-primary">Editar</button>
+        </form>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,385 @@
+[25-Nov-2018 15:43:58 UTC] PHP Fatal error:  Uncaught Error: Class 'App' not found in /home/ubuntu/workspace/server/proyectoMio/login/dologout.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/login/dologout.php on line 10
+[25-Nov-2018 16:22:48 UTC] PHP Warning:  require(classes/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/server/proyectoMio/root/index.php on line 3
+[25-Nov-2018 16:22:48 UTC] PHP Fatal error:  require(): Failed opening required 'classes/autoload.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/server/proyectoMio/root/index.php on line 3
+[25-Nov-2018 16:22:59 UTC] PHP Fatal error:  Uncaught Twig_Error_Loader: The "/home/ubuntu/workspace/server/proyectoMio/root/templates" directory does not exist ("/home/ubuntu/workspace/server/proyectoMio/root/templates"). in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:101
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(82): Twig_Loader_Filesystem->addPath('/home/ubuntu/wo...', '__main__')
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(40): Twig_Loader_Filesystem->setPaths(Array)
+#2 /home/ubuntu/workspace/server/proyectoMio/root/index.php(13): Twig_Loader_Filesystem->__construct('/home/ubuntu/wo...')
+#3 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 101
+[25-Nov-2018 16:23:26 UTC] PHP Fatal error:  Uncaught Twig_Error_Loader: The "/home/ubuntu/workspace/server/proyectoMio/root../classes/templates" directory does not exist ("/home/ubuntu/workspace/server/proyectoMio/root../classes/templates"). in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:101
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(82): Twig_Loader_Filesystem->addPath('/home/ubuntu/wo...', '__main__')
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(40): Twig_Loader_Filesystem->setPaths(Array)
+#2 /home/ubuntu/workspace/server/proyectoMio/root/index.php(13): Twig_Loader_Filesystem->__construct('/home/ubuntu/wo...')
+#3 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 101
+[25-Nov-2018 16:23:38 UTC] PHP Fatal error:  Uncaught Twig_Error_Loader: The "/home/ubuntu/workspace/server/proyectoMio/root../templates" directory does not exist ("/home/ubuntu/workspace/server/proyectoMio/root../templates"). in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:101
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(82): Twig_Loader_Filesystem->addPath('/home/ubuntu/wo...', '__main__')
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(40): Twig_Loader_Filesystem->setPaths(Array)
+#2 /home/ubuntu/workspace/server/proyectoMio/root/index.php(13): Twig_Loader_Filesystem->__construct('/home/ubuntu/wo...')
+#3 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 101
+[25-Nov-2018 16:24:01 UTC] PHP Fatal error:  Uncaught Twig_Error_Loader: The "/home/ubuntu/workspace/server/proyectoMio/root../templates" directory does not exist ("/home/ubuntu/workspace/server/proyectoMio/root../templates"). in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:101
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(82): Twig_Loader_Filesystem->addPath('/home/ubuntu/wo...', '__main__')
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(40): Twig_Loader_Filesystem->setPaths(Array)
+#2 /home/ubuntu/workspace/server/proyectoMio/root/index.php(14): Twig_Loader_Filesystem->__construct('/home/ubuntu/wo...')
+#3 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 101
+[25-Nov-2018 16:24:14 UTC] PHP Parse error:  syntax error, unexpected ''../templates'' (T_CONSTANT_ENCAPSED_STRING) in /home/ubuntu/workspace/server/proyectoMio/root/index.php on line 14
+[25-Nov-2018 16:34:42 UTC] PHP Fatal error:  Uncaught Error: Class 'Database' not found in /home/ubuntu/workspace/server/proyectoMio/root/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/root/index.php on line 31
+[25-Nov-2018 16:39:11 UTC] PHP Warning:  require(../vendor/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/server/proyectoMio/classes/doctrine/doctrine.php on line 3
+[25-Nov-2018 16:39:11 UTC] PHP Fatal error:  require(): Failed opening required '../vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/server/proyectoMio/classes/doctrine/doctrine.php on line 3
+[25-Nov-2018 16:40:14 UTC] PHP Warning:  require(../vendor/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/server/proyectoMio/classes/doctrine/doctrine.php on line 3
+[25-Nov-2018 16:40:14 UTC] PHP Fatal error:  require(): Failed opening required '../vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/server/proyectoMio/classes/doctrine/doctrine.php on line 3
+[25-Nov-2018 16:41:13 UTC] PHP Fatal error:  Uncaught Doctrine\Common\Persistence\Mapping\MappingException: Class 'Usuario' does not exist in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/MappingException.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/RuntimeReflectionService.php(41): Doctrine\Common\Persistence\Mapping\MappingException::nonExistingClass('Usuario')
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(281): Doctrine\Common\Persistence\Mapping\RuntimeReflectionService->getParentClasses('Usuario')
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(311): Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getParentClasses('Usuario')
+#3 /home/ubuntu/workspace/server/proyectoMio/classe in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/MappingException.php on line 96
+[25-Nov-2018 16:41:46 UTC] PHP Fatal error:  Uncaught Doctrine\Common\Persistence\Mapping\MappingException: Class 'Usuario' does not exist in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/MappingException.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/RuntimeReflectionService.php(41): Doctrine\Common\Persistence\Mapping\MappingException::nonExistingClass('Usuario')
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(281): Doctrine\Common\Persistence\Mapping\RuntimeReflectionService->getParentClasses('Usuario')
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(311): Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getParentClasses('Usuario')
+#3 /home/ubuntu/workspace/server/proyectoMio/classe in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/MappingException.php on line 96
+[25-Nov-2018 16:42:12 UTC] PHP Fatal error:  Uncaught Doctrine\Common\Persistence\Mapping\MappingException: Class 'usuario' does not exist in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/MappingException.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/RuntimeReflectionService.php(41): Doctrine\Common\Persistence\Mapping\MappingException::nonExistingClass('usuario')
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(281): Doctrine\Common\Persistence\Mapping\RuntimeReflectionService->getParentClasses('usuario')
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(311): Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getParentClasses('usuario')
+#3 /home/ubuntu/workspace/server/proyectoMio/classe in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/MappingException.php on line 96
+[25-Nov-2018 17:31:34 UTC] PHP Warning:  require(../classes/doctrine/doctrine.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/server/proyectoMio/usuario/index.php on line 39
+[25-Nov-2018 17:31:34 UTC] PHP Fatal error:  require(): Failed opening required '../classes/doctrine/doctrine.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/server/proyectoMio/usuario/index.php on line 39
+[25-Nov-2018 17:31:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'project.usuario' doesn't exist in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:104
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(104): PDO->query('SELECT t0.id AS...')
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(852): Doctrine\DBAL\Driver\PDOConnection->query('SELECT t0.id AS...')
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php(884): Doctrine\DBAL\Connection->executeQuery('SELECT t0.id AS...', Array, Array)
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php(181): Doctrine\ORM\Persisters\Entity\BasicEntityPersister->loadAll(Array, NULL, NULL, NULL)
+#4 /home/ubuntu/workspace/s in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 53
+[25-Nov-2018 17:34:14 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/server/proyectoMio/usuario/index.php on line 52
+[25-Nov-2018 17:34:14 UTC] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "tablaBasica.twig" (looked into: ../templates). in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('tablaBasica.twi...')
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('tablaBasica.twi...')
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('tablaBasica.twi...')
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('tablaBasica.twi...')
+#4 /home/ubuntu/workspace/server/proyectoMio/usuario/index.php(55): Twig_Environment->render('tablaBasica.twi...', Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[25-Nov-2018 17:34:17 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/server/proyectoMio/usuario/index.php on line 52
+[25-Nov-2018 17:34:17 UTC] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "tablaBasica.twig" (looked into: ../templates). in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('tablaBasica.twi...')
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('tablaBasica.twi...')
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('tablaBasica.twi...')
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('tablaBasica.twi...')
+#4 /home/ubuntu/workspace/server/proyectoMio/usuario/index.php(55): Twig_Environment->render('tablaBasica.twi...', Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[25-Nov-2018 17:35:24 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/server/proyectoMio/usuario/index.php on line 52
+[25-Nov-2018 17:44:48 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/server/proyectoMio/usuario/index.php on line 52
+[25-Nov-2018 17:44:54 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/server/proyectoMio/usuario/index.php on line 52
+[25-Nov-2018 17:45:33 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/server/proyectoMio/usuario/index.php on line 52
+[25-Nov-2018 17:45:59 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/server/proyectoMio/usuario/index.php on line 52
+[25-Nov-2018 17:46:01 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/server/proyectoMio/usuario/index.php on line 52
+[25-Nov-2018 17:46:02 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/server/proyectoMio/usuario/index.php on line 52
+[25-Nov-2018 17:46:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method izv\tools\Session::login2() in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php:41
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php on line 41
+[25-Nov-2018 17:47:15 UTC] PHP Notice:  Undefined variable: correo in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php on line 37
+[25-Nov-2018 17:47:15 UTC] PHP Notice:  Undefined variable: entityManager in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php on line 28
+[25-Nov-2018 17:47:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function createQuery() on null in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php:28
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/login/dologin.php(37): login2(NULL, 'toor')
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php on line 28
+[25-Nov-2018 17:47:27 UTC] PHP Notice:  Undefined variable: entityManager in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php on line 28
+[25-Nov-2018 17:47:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function createQuery() on null in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php:28
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/login/dologin.php(37): login2('patata@mail.com', 'toor')
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php on line 28
+[25-Nov-2018 17:49:42 UTC] PHP Notice:  Undefined variable: entityManager in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php on line 28
+[25-Nov-2018 17:49:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function createQuery() on null in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php:28
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/login/dologin.php(41): login2('patata@mail.com', 'toor')
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php on line 28
+[25-Nov-2018 17:51:51 UTC] PHP Fatal error:  Uncaught Doctrine\ORM\Query\QueryException: select * from usuario where correo = :correo and activo = 1 in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/Parser.php(448): Doctrine\ORM\Query\QueryException::dqlError('select * from u...')
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/Parser.php(2229): Doctrine\ORM\Query\Parser->syntaxError('IdentificationV...', Array)
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/Parser.php(1164): Doctrine\ORM\Query\Parser->SelectExpression()
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/Parser.php(874): Doctrine\ORM\Query\Parser->SelectClause()
+#4 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/Parser.php(843):  in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php on line 52
+[25-Nov-2018 17:52:51 UTC] PHP Fatal error:  Uncaught Doctrine\ORM\Query\QueryException: select a from usuario a where correo = :correo and activo = 1 in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/Parser.php(483): Doctrine\ORM\Query\QueryException::dqlError('select a from u...')
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/Parser.php(971): Doctrine\ORM\Query\Parser->semanticalError('line 0, col 14 ...', Array)
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/Parser.php(1702): Doctrine\ORM\Query\Parser->AbstractSchemaName()
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/Parser.php(1557): Doctrine\ORM\Query\Parser->RangeVariableDeclaration()
+#4 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Que in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php on line 63
+[25-Nov-2018 17:53:04 UTC] PHP Fatal error:  Uncaught Doctrine\ORM\Query\QueryException: select a from usuario a where a.correo = :correo and a.activo = 1 in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/Parser.php(483): Doctrine\ORM\Query\QueryException::dqlError('select a from u...')
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/Parser.php(971): Doctrine\ORM\Query\Parser->semanticalError('line 0, col 14 ...', Array)
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/Parser.php(1702): Doctrine\ORM\Query\Parser->AbstractSchemaName()
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/Parser.php(1557): Doctrine\ORM\Query\Parser->RangeVariableDeclaration()
+#4 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php on line 63
+[25-Nov-2018 17:59:03 UTC] PHP Notice:  Undefined variable: entityManager in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php on line 29
+[25-Nov-2018 17:59:03 UTC] PHP Fatal error:  Uncaught Error: Call to a member function createQuery() on null in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php:29
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/login/dologin.php(42): login2('patata@mail.com', 'toor')
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/login/dologin.php on line 29
+[25-Nov-2018 18:10:14 UTC] PHP Notice:  Undefined property: izv\data\Usuario::$getAdministrador in /home/ubuntu/workspace/server/proyectoMio/usuario/index.php on line 52
+[25-Nov-2018 18:10:17 UTC] PHP Notice:  Undefined property: izv\data\Usuario::$getAdministrador in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 39
+[25-Nov-2018 18:10:22 UTC] PHP Notice:  Undefined property: izv\data\Usuario::$getAdministrador in /home/ubuntu/workspace/server/proyectoMio/usuario/index.php on line 52
+[25-Nov-2018 18:10:23 UTC] PHP Notice:  Undefined property: izv\data\Usuario::$getAdministrador in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 39
+[25-Nov-2018 18:11:09 UTC] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Environment.php(378) : eval()'d code on line 145
+[25-Nov-2018 18:14:51 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\data\Tools' not found in /home/ubuntu/workspace/server/proyectoMio/classes/izv/data/Usuario.php:259
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Extension/Core.php(1619): izv\data\Usuario->getFechaalta()
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Environment.php(378) : eval()'d code(145): twig_get_attribute(Object(Twig_Environment), Object(Twig_Source), Object(izv\data\Usuario), 'fechaAlta', Array)
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Template.php(189): __TwigTemplate_992d6ad287a6913d017a21059ebfcb58e8c007bf22bf12816061873d5130794d->block_contenido_principal(Array, Array)
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Environment.php(378) : eval()'d code(81): Twig_Template->displayBlock('contenido_princ...', Array, Array)
+#4 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Template.php(390): __TwigTemp in /home/ubuntu/workspace/server/proyectoMio/classes/izv/data/Usuario.php on line 259
+[25-Nov-2018 18:15:18 UTC] PHP Fatal error:  Uncaught TypeError: DateTime::__construct() expects parameter 1 to be string, object given in /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Tools.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Tools.php(21): DateTime->__construct(Object(DateTime))
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/izv/data/Usuario.php(247): izv\tools\Tools::formatDate(Object(DateTime))
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Extension/Core.php(1619): izv\data\Usuario->getFechaalta()
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Environment.php(378) : eval()'d code(145): twig_get_attribute(Object(Twig_Environment), Object(Twig_Source), Object(izv\data\Usuario), 'fechaAlta', Array)
+#4 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/twig/twig/lib/Twig/Template.php(189): __TwigTemplate_992d6ad287a6913d017a21059ebfcb58e8c007bf22bf12816061873d5130794d->block_contenido_principal(Array, Array)
+#5 /home/ in /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Tools.php on line 21
+[25-Nov-2018 18:22:09 UTC] PHP Fatal error:  Uncaught Error: Class 'Tools' not found in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 46
+[26-Nov-2018 07:22:37 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 46
+[26-Nov-2018 09:53:26 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/doinsert.php on line 43
+[26-Nov-2018 10:11:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method izv\tools\Tools::sendActivation() in /home/ubuntu/workspace/server/proyectoMio/usuario/doinsert.php:40
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/usuario/doinsert.php on line 40
+[26-Nov-2018 10:11:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'chema@mail.com' for key 'UNIQ_2265B05D77040BC9' in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php:105
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php(105): PDOStatement->execute(NULL)
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(168): Doctrine\DBAL\Driver\PDOStatement->execute(NULL)
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php(281): Doctrine\DBAL\Statement->execute()
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php(1014): Doctrine\ORM\Persisters\Entity\BasicEntityPersister->executeInserts()
+#4 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctr in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 66
+[26-Nov-2018 10:15:01 UTC] PHP Warning:  Missing argument 2 for izv\tools\Mail::sendActivation(), called in /home/ubuntu/workspace/server/proyectoMio/usuario/doinsert.php on line 40 and defined in /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Mail.php on line 61
+[26-Nov-2018 10:15:01 UTC] PHP Notice:  Undefined variable: url in /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Mail.php on line 66
+[26-Nov-2018 10:15:02 UTC] PHP Notice:  Undefined variable: resultado in /home/ubuntu/workspace/server/proyectoMio/usuario/doinsert.php on line 45
+[26-Nov-2018 10:15:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'chema2@mail.com' for key 'UNIQ_2265B05D77040BC9' in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php:105
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php(105): PDOStatement->execute(NULL)
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(168): Doctrine\DBAL\Driver\PDOStatement->execute(NULL)
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php(281): Doctrine\DBAL\Statement->execute()
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php(1014): Doctrine\ORM\Persisters\Entity\BasicEntityPersister->executeInserts()
+#4 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doct in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 66
+[26-Nov-2018 10:16:04 UTC] PHP Notice:  Undefined variable: resultado in /home/ubuntu/workspace/server/proyectoMio/usuario/doinsert.php on line 45
+[26-Nov-2018 10:17:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'chema2@mail.com' for key 'UNIQ_2265B05D77040BC9' in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php:105
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php(105): PDOStatement->execute(NULL)
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(168): Doctrine\DBAL\Driver\PDOStatement->execute(NULL)
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php(281): Doctrine\DBAL\Statement->execute()
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php(1014): Doctrine\ORM\Persisters\Entity\BasicEntityPersister->executeInserts()
+#4 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doct in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 66
+[26-Nov-2018 10:59:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'chema2@mail.com' for key 'UNIQ_2265B05D77040BC9' in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php:105
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php(105): PDOStatement->execute(NULL)
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(168): Doctrine\DBAL\Driver\PDOStatement->execute(NULL)
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php(281): Doctrine\DBAL\Statement->execute()
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php(1014): Doctrine\ORM\Persisters\Entity\BasicEntityPersister->executeInserts()
+#4 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doct in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 66
+[26-Nov-2018 11:01:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'chema2@mail.com' for key 'UNIQ_2265B05D77040BC9' in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php:105
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php(105): PDOStatement->execute(NULL)
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(168): Doctrine\DBAL\Driver\PDOStatement->execute(NULL)
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php(281): Doctrine\DBAL\Statement->execute()
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php(1014): Doctrine\ORM\Persisters\Entity\BasicEntityPersister->executeInserts()
+#4 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doct in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 66
+[26-Nov-2018 11:42:43 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 46
+[26-Nov-2018 16:08:41 UTC] PHP Fatal error:  Uncaught Error: Undefined class constant 'JWR_CODE' in /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Mail.php:66
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/usuario/register.php(37): izv\tools\Mail::sendActivation(Object(izv\data\Usuario), 'https://daw-p07...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Mail.php on line 66
+[26-Nov-2018 16:09:39 UTC] PHP Fatal error:  Uncaught Error: Undefined class constant 'JWR_CODE' in /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Mail.php:66
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/usuario/register.php(37): izv\tools\Mail::sendActivation(Object(izv\data\Usuario), 'https://daw-p07...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Mail.php on line 66
+[26-Nov-2018 16:09:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'patata.auto.we@gmail.com' for key 'UNIQ_2265B05D77040BC9' in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php:105
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php(105): PDOStatement->execute(NULL)
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(168): Doctrine\DBAL\Driver\PDOStatement->execute(NULL)
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php(281): Doctrine\DBAL\Statement->execute()
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php(1014): Doctrine\ORM\Persisters\Entity\BasicEntityPersister->executeInserts()
+#4 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 66
+[26-Nov-2018 16:10:36 UTC] PHP Fatal error:  Uncaught Error: Class 'Alert' not found in /home/ubuntu/workspace/server/proyectoMio/usuario/register.php:42
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/usuario/register.php on line 42
+[26-Nov-2018 16:12:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'patata.auto.we@gmail.com' for key 'UNIQ_2265B05D77040BC9' in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php:105
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php(105): PDOStatement->execute(NULL)
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(168): Doctrine\DBAL\Driver\PDOStatement->execute(NULL)
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php(281): Doctrine\DBAL\Statement->execute()
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php(1014): Doctrine\ORM\Persisters\Entity\BasicEntityPersister->executeInserts()
+#4 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 66
+[26-Nov-2018 16:13:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Alert' not found in /home/ubuntu/workspace/server/proyectoMio/usuario/register.php:42
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/usuario/register.php on line 42
+[26-Nov-2018 16:13:47 UTC] PHP Fatal error:  Uncaught Error: Class 'Alert' not found in /home/ubuntu/workspace/server/proyectoMio/usuario/register.php:42
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/usuario/register.php on line 42
+[26-Nov-2018 16:42:32 UTC] PHP Fatal error:  Uncaught Error: Class 'App' not found in /home/ubuntu/workspace/server/proyectoMio/login/activate.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/login/activate.php on line 24
+[26-Nov-2018 16:44:50 UTC] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/firebase/php-jwt/src/JWT.php:78
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Tools.php(43): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1Q...', 'La mejor clave ...')
+#1 /home/ubuntu/workspace/server/proyectoMio/login/activate.php(26): izv\tools\Tools::decryptJWT('eyJ0eXAiOiJKV1Q...', 'La mejor clave ...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/firebase/php-jwt/src/JWT.php on line 78
+[26-Nov-2018 16:45:43 UTC] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/firebase/php-jwt/src/JWT.php:78
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Tools.php(43): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1Q...', 'La mejor clave ...', Array)
+#1 /home/ubuntu/workspace/server/proyectoMio/login/activate.php(26): izv\tools\Tools::decryptJWT('eyJ0eXAiOiJKV1Q...', 'La mejor clave ...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/firebase/php-jwt/src/JWT.php on line 78
+[26-Nov-2018 16:55:06 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/ubuntu/workspace/server/proyectoMio/login/activate.php on line 33
+[26-Nov-2018 17:09:03 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /home/ubuntu/workspace/server/proyectoMio/login/activate.php on line 27
+[26-Nov-2018 17:11:18 UTC] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/firebase/php-jwt/src/JWT.php:78
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Tools.php(43): Firebase\JWT\JWT::decode('yJ0eXAiOiJKV1Qi...', 'La mejor clave ...', Array)
+#1 /home/ubuntu/workspace/server/proyectoMio/login/activate.php(28): izv\tools\Tools::decryptJWT('yJ0eXAiOiJKV1Qi...', 'La mejor clave ...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/firebase/php-jwt/src/JWT.php on line 78
+[26-Nov-2018 17:11:54 UTC] PHP Fatal error:  Uncaught TypeError: Argument 3 passed to Firebase\JWT\JWT::decode() must be of the type array, string given, called in /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Tools.php on line 43 and defined in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/firebase/php-jwt/src/JWT.php:69
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Tools.php(43): Firebase\JWT\JWT::decode('yJ0eXAiOiJKV1Qi...', 'La mejor clave ...', 'HS256')
+#1 /home/ubuntu/workspace/server/proyectoMio/login/activate.php(28): izv\tools\Tools::decryptJWT('yJ0eXAiOiJKV1Qi...', 'La mejor clave ...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/firebase/php-jwt/src/JWT.php on line 69
+[26-Nov-2018 17:12:06 UTC] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/firebase/php-jwt/src/JWT.php:78
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Tools.php(43): Firebase\JWT\JWT::decode('yJ0eXAiOiJKV1Qi...', 'La mejor clave ...', Array)
+#1 /home/ubuntu/workspace/server/proyectoMio/login/activate.php(28): izv\tools\Tools::decryptJWT('yJ0eXAiOiJKV1Qi...', 'La mejor clave ...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/firebase/php-jwt/src/JWT.php on line 78
+[26-Nov-2018 17:14:16 UTC] PHP Parse error:  syntax error, unexpected '$key' (T_VARIABLE), expecting ',' or ')' in /home/ubuntu/workspace/server/proyectoMio/login/activate.php on line 28
+[26-Nov-2018 17:22:26 UTC] PHP Notice:  Undefined variable: manager in /home/ubuntu/workspace/server/proyectoMio/login/activate.php on line 42
+[26-Nov-2018 17:22:26 UTC] PHP Fatal error:  Uncaught Error: Call to a member function edit() on null in /home/ubuntu/workspace/server/proyectoMio/login/activate.php:42
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/login/activate.php on line 42
+[26-Nov-2018 18:02:28 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 46
+[26-Nov-2018 18:02:37 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 46
+[26-Nov-2018 18:05:26 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[26-Nov-2018 18:05:41 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/doedit.php on line 46
+[26-Nov-2018 18:07:51 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[26-Nov-2018 18:16:36 UTC] PHP Notice:  Undefined variable: id in /home/ubuntu/workspace/server/proyectoMio/usuario/doedit.php on line 26
+[26-Nov-2018 18:16:36 UTC] PHP Fatal error:  Uncaught Error: Undefined class constant 'edit' in /home/ubuntu/workspace/server/proyectoMio/usuario/doedit.php:40
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/usuario/doedit.php on line 40
+[26-Nov-2018 18:16:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'chema@mail.com' for key 'UNIQ_2265B05D77040BC9' in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php:105
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php(105): PDOStatement->execute(NULL)
+#1 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(168): Doctrine\DBAL\Driver\PDOStatement->execute(NULL)
+#2 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php(281): Doctrine\DBAL\Statement->execute()
+#3 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php(1014): Doctrine\ORM\Persisters\Entity\BasicEntityPersister->executeInserts()
+#4 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctr in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 66
+[26-Nov-2018 18:17:02 UTC] PHP Fatal error:  Uncaught Error: Undefined class constant 'edit' in /home/ubuntu/workspace/server/proyectoMio/usuario/doedit.php:39
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/usuario/doedit.php on line 39
+[26-Nov-2018 18:17:22 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[26-Nov-2018 18:20:06 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[26-Nov-2018 18:20:24 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[26-Nov-2018 18:21:33 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[26-Nov-2018 18:21:41 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[26-Nov-2018 18:23:41 UTC] PHP Notice:  Undefined variable: entityManager in /home/ubuntu/workspace/server/proyectoMio/usuario/doedit.php on line 27
+[26-Nov-2018 18:23:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getRepository() on null in /home/ubuntu/workspace/server/proyectoMio/usuario/doedit.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/usuario/doedit.php on line 27
+[26-Nov-2018 18:25:59 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[26-Nov-2018 18:26:02 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[26-Nov-2018 18:37:23 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[26-Nov-2018 18:37:30 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[26-Nov-2018 18:50:47 UTC] PHP Notice:  Undefined variable: entityManager in /home/ubuntu/workspace/server/proyectoMio/usuario/dodelete.php on line 31
+[26-Nov-2018 18:50:47 UTC] PHP Fatal error:  Uncaught Error: Call to a member function find() on null in /home/ubuntu/workspace/server/proyectoMio/usuario/dodelete.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/usuario/dodelete.php on line 31
+[26-Nov-2018 18:52:10 UTC] PHP Fatal error:  Uncaught Doctrine\ORM\ORMException: The identifier id is missing for a query of izv\data\Usuario in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/ORMException.php:294
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php(403): Doctrine\ORM\ORMException::missingIdentifierField('izv\\data\\Usuari...', 'id')
+#1 /home/ubuntu/workspace/server/proyectoMio/usuario/dodelete.php(31): Doctrine\ORM\EntityManager->find('izv\\data\\Usuari...', Array)
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/ORMException.php on line 294
+[26-Nov-2018 19:08:22 UTC] PHP Fatal error:  Uncaught Doctrine\ORM\ORMInvalidArgumentException: EntityManager#remove() expects parameter 1 to be an entity object, NULL given. in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/ORMInvalidArgumentException.php:170
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php(597): Doctrine\ORM\ORMInvalidArgumentException::invalidObject('EntityManager#r...', NULL)
+#1 /home/ubuntu/workspace/server/proyectoMio/usuario/dodelete.php(42): Doctrine\ORM\EntityManager->remove(NULL)
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/ORMInvalidArgumentException.php on line 170
+[26-Nov-2018 19:09:42 UTC] PHP Fatal error:  Uncaught Doctrine\ORM\ORMInvalidArgumentException: EntityManager#remove() expects parameter 1 to be an entity object, NULL given. in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/ORMInvalidArgumentException.php:170
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php(597): Doctrine\ORM\ORMInvalidArgumentException::invalidObject('EntityManager#r...', NULL)
+#1 /home/ubuntu/workspace/server/proyectoMio/usuario/dodelete.php(42): Doctrine\ORM\EntityManager->remove(NULL)
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/ORMInvalidArgumentException.php on line 170
+[26-Nov-2018 19:10:05 UTC] PHP Fatal error:  Uncaught Doctrine\ORM\ORMInvalidArgumentException: EntityManager#remove() expects parameter 1 to be an entity object, NULL given. in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/ORMInvalidArgumentException.php:170
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php(597): Doctrine\ORM\ORMInvalidArgumentException::invalidObject('EntityManager#r...', NULL)
+#1 /home/ubuntu/workspace/server/proyectoMio/usuario/dodelete.php(42): Doctrine\ORM\EntityManager->remove(NULL)
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/ORMInvalidArgumentException.php on line 170
+[26-Nov-2018 19:10:42 UTC] PHP Fatal error:  Uncaught Doctrine\ORM\ORMInvalidArgumentException: EntityManager#remove() expects parameter 1 to be an entity object, NULL given. in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/ORMInvalidArgumentException.php:170
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php(597): Doctrine\ORM\ORMInvalidArgumentException::invalidObject('EntityManager#r...', NULL)
+#1 /home/ubuntu/workspace/server/proyectoMio/usuario/dodelete.php(41): Doctrine\ORM\EntityManager->remove(NULL)
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/ORMInvalidArgumentException.php on line 170
+[26-Nov-2018 19:11:05 UTC] PHP Fatal error:  Uncaught Doctrine\ORM\ORMInvalidArgumentException: EntityManager#remove() expects parameter 1 to be an entity object, NULL given. in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/ORMInvalidArgumentException.php:170
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php(597): Doctrine\ORM\ORMInvalidArgumentException::invalidObject('EntityManager#r...', NULL)
+#1 /home/ubuntu/workspace/server/proyectoMio/usuario/dodelete.php(41): Doctrine\ORM\EntityManager->remove(NULL)
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/ORMInvalidArgumentException.php on line 170
+[26-Nov-2018 19:11:43 UTC] PHP Fatal error:  Uncaught Doctrine\ORM\ORMInvalidArgumentException: EntityManager#remove() expects parameter 1 to be an entity object, NULL given. in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/ORMInvalidArgumentException.php:170
+Stack trace:
+#0 /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php(597): Doctrine\ORM\ORMInvalidArgumentException::invalidObject('EntityManager#r...', NULL)
+#1 /home/ubuntu/workspace/server/proyectoMio/usuario/dodelete.php(41): Doctrine\ORM\EntityManager->remove(NULL)
+#2 {main}
+  thrown in /home/ubuntu/workspace/server/proyectoMio/classes/vendor/doctrine/orm/lib/Doctrine/ORM/ORMInvalidArgumentException.php on line 170
+[26-Nov-2018 20:58:38 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[26-Nov-2018 20:59:41 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[27-Nov-2018 08:11:22 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[27-Nov-2018 16:36:59 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[27-Nov-2018 16:38:29 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[27-Nov-2018 16:39:56 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[27-Nov-2018 18:39:32 UTC] PHP Notice:  Undefined variable: alert in /home/ubuntu/workspace/server/proyectoMio/usuario/edit.php on line 49
+[28-Nov-2018 13:41:43 UTC] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /home/ubuntu/workspace/server/proyectoMio/classes/izv/tools/Session.php on line 16
