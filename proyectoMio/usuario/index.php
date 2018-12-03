@@ -30,10 +30,9 @@ $op = Reader::read('op');
 $alert = Alert::getMessage($op, $resultado);
 
 // Sacamos la lista de usuarios
-$db = new Database();
-$manager = new ManageUsuario($db);
-
-$listaUsuarios = $manager->getAll();
+//$db = new Database();
+//$manager = new ManageUsuario($db);
+//$listaUsuarios = $manager->getAll();
 
 // Con doctrine
 require '../classes/config/doctrine.php';

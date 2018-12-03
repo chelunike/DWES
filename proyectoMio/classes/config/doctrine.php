@@ -5,7 +5,7 @@ require '/home/ubuntu/workspace/server/proyectoMio/classes/vendor/autoload.php';
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
-$paths = array("/home/ubuntu/workspace/server/proyectoMio/classes/config/src");
+$paths = array(__DIR__ . '/src');
 $isDevMode = false;
 
 // the connection configuration
