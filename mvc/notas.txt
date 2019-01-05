@@ -1,0 +1,134 @@
+:)<-<
+
+Tareas de Navidad. --> Usuarios MVC
+	- Incluir nueva interfaz
+	- Crear Modelo, Controladores y Vistas
+	- Hacer Funcionar el login
+	- Hacer Funcionar el registro
+	- Hacer FUncionar el añadir root
+	- Hacer Funcionar el Editarse
+	- Hecer Funcionar el Borrar
+
+	- Finalmente si hay tiempo añadir mas cosas 
+
+	- Modificar Manager Ususario usando Doctrine
+	- 
+Progreso de las Tareas
+
+/index.php
+ |- js 
+ |- css
+ |- classes
+	 |- izv
+		|- app
+			|- App.php - Original
+		|- common
+			|- Comun.php - Original
+		|- controller
+			|- Controller.php - Original
+			|- ControllerUsuario - Nuevo - Por hacer
+			. . .
+
+
+		|- data
+			|- Usuario.php - A modificar
+		|- database
+			|- Database.php - Original
+			\- Doctrine.php - Nuevo - Por hacer
+		|- manager
+			|- ManagerUsuario.php - Original - Posibles modificaciones
+		|- model
+			|- Model.php - Original
+			|- ModelUsuario - Nuevo - Por hacer
+			. . .
+
+		|- mvc
+			|- FrontController.php - Original - Modificado
+			|- Route.php - Original - Modificado
+			\- Router.php - Original - Modificado
+		\- tools
+			|- Alert.php - Original - Modificado
+			|- Mail.php - Original - Modificado
+			|- Reader.php - Original 
+     		|- Render.php - Original - Modificado
+     		|- Session.php - Original
+     		|- Tools.php - Original - Modificado
+     		|- Upload.php - Original 
+     		\- UploadMultiple.php - Original 
+		\- view
+			|- View.php - Original - Modificado
+     		|- View Tal.php - Original - Modificado
+     		. . .
+ |- css
+ |- img
+ |- js
+ |- sql
+ |- .htaccess - Original para no liarla parda 
+ |- index.php
+ |- notas.php -- Es este bonito archivo :) --
+
+
+
+
+ - Nuestro modelo -
+/index.php
+ |- js 
+ |- css
+ |- producto // Por cada tabla una carpeta
+ |- usuario  // Por cada carpeta
+ |   |- index.php
+ |   |- do....php
+ |- cliente
+ |   |- . . .
+ | // Cada carpeta le llamamos 'rutas' 
+ | // Cada php de dentro 'acciones'
+
+
+
+ - Nuestro NUEVO modelo -
+/index.php
+ |- js 
+ |- css
+ |- classes
+ 
+Donde index.php va a ser donde se realize todo el trabajo
+Para que siempre funcione siempre necesita dos parametros (siempre)
+	- ruta y accion ... 
+	
+	app/index.php?ruta=usuario&accion=doedit
+	app/?ruta=usuario&accion=doedit
+	app/usuario/doedit // (pretty url)
+	
+
+.htaccess
+RewriteRules
+
+# Activo el motor de rescritura(se aplica a todos los subdirectorios)
+RewriteEngine On
+# Si no pides nada se manda a index.php 
+# [L] Last indica que no se aplican mas reglas
+RewriteRule ^$ c9.php [L] 
+# Cuando se piden un directorio o archivo que no existe se aplica la regla ultima
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+# ^(.*)$ me pidas lo que me pidas
+# Se manda a c9.php con el parametro $1 que es el valor escrito
+RewriteRule ^(.*)$ c9.php?params=$1 [QSA]
+
+
+Incoming Request
+ |
+Front Controller ( Controlador frontal )
+ |  Pude disponer de muchos controladores, muchas vistas y muchos modelos
+ |  Para saber que modelo, controlador y vista usar se realiza un mapeo 
+ |  Classes: Route Clase pojo que mapea y almacena los 3 datos
+ |           Router Asocia ruta que llega con Route 
+Controller
+ |- Model
+Front Controller
+ |- Controller
+View Template
+ |- View
+Front Controller
+ |
+Return response
