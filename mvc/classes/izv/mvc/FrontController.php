@@ -1,6 +1,7 @@
 <?php
 namespace izv\mvc;
 
+use izv\app\App;
 
  /**
   * Controlador Frontal
@@ -20,12 +21,21 @@ class FrontController {
 		$this->action = strtolower($accion);
 		
 		$model = $route->getModel();
+		if(!class_exists($model)) {
+			$model = App::DEFAULT_MODEL;
+		}
 		$this->model = new $model();
 	
 		$view = $route->getView();
+		if(!class_exists($view)) {
+			$view = App::DEFAULT_VIEW;
+		}
 		$this->view = new $view($this->model);
 	
 		$controller = $route->getController();
+		if(!class_exists($controller)) {
+			$controller = App::DEFAULT_CONTROLLER;
+		}
 		$this->controller = new $controller($this->model);    
 	
 	}

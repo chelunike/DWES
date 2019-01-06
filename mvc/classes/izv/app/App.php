@@ -31,5 +31,11 @@ class App {
     
     // Util
     const BASE = '192.168.187.121/proyecto/';
+
+    // MVC
+    const DEFAULT_ROUTE = 'index' ,
+            DEFAULT_MODEL = 'MainModel',
+            DEFAULT_CONTROLLER = 'MainController',
+            DEFAULT_VIEW = 'MainView';
     
 }

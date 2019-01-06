@@ -30,13 +30,13 @@ if($parametros !== null) {
 }
 
 // Es un echo que estos echos son necesarios
-echo Tools::view(explode('/', $params));
-echo Tools::print('Ruta: ' . $ruta);
-echo Tools::print('Accion: ' . $accion);
+//echo Tools::view(explode('/', $params));
+//echo Tools::print('Ruta: ' . $ruta);
+//echo Tools::print('Accion: ' . $accion);
 
 // -- La Magia del Controlador Frontal --
 $frontController = new FrontController($ruta, $accion);
 $frontController->doAction();
 
 // -- Respuesta del Controlador Frontal --
-//echo $frontController->render();
+echo $frontController->render();

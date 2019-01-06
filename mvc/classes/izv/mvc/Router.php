@@ -2,6 +2,7 @@
 namespace izv\mvc;
 
 //use izv\mvc\Route;
+use izv\app\App;
 
  /**
   * 
@@ -28,7 +29,7 @@ class Router {
     
     // Get y Set
     public function getRoute() {
-        $ruta = $this->rutas['index'];
+        $ruta = $this->rutas[App::DEFAULT_ROUTE];
         if(isset($this->rutas[$this->ruta])) {
             $ruta = $this->rutas[$this->ruta];
         }
