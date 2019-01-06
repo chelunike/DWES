@@ -30,6 +30,6 @@ class App {
         JWT_CODE='La mejor clave secreta es la que no existe:)';
     
     // Util
-    const BASE = 'https://daw-p07470.c9users.io/server/acts3/';
+    const BASE = '192.168.187.121/proyecto/';
     
 }

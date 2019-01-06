@@ -67,7 +67,16 @@ Progreso de las Tareas
  |- index.php
  |- notas.php -- Es este bonito archivo :) --
 
+Modelos de interfaz necesarios
 
+- home
+
+- login
+- register
+- index
+- formulario edit ( self )
+- formulario edit ( root )
+- formulario insert
 
 
  - Nuestro modelo -
