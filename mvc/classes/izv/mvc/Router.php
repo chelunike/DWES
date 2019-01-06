@@ -17,15 +17,10 @@ class Router {
     
     function __construct($ruta) {
         $this->rutas = array(
-            'indexa' => new Route('Model', 'View', 'Controller'),
-            'indexaMio' => new Route('FirstModel', 'FirstView', 'FirstController'),
+            'index' => new Route('MainModel', 'MainView', 'MainController'),
             'dashboard' => new Route('DashModel', 'DashView', 'DashController'),
-            'admin' => new Route('AdminModel', 'AdminView' , 'AdminController'),
-            'index' => new Route('FirstModel', 'MaundyView', 'UserController'),
-            'zeta'  => new Route('FirstModel', 'SecondView', 'FirstController'),
             'user'  => new Route('UserModel', 'UserView', 'UserController'),
             //'ruta'  => new Route('modelo', 'vista', 'controlador'),
-            'otra'  => new Route('', '', '')
         );
         $this->ruta = strtolower($ruta);
     }

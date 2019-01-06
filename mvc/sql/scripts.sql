@@ -2,16 +2,18 @@ create database simple
   default character set utf8
   collate utf8_general_ci;
   
-create user simple@localhost
-  identified by 'simple';
+create user 'phepy'@'%'
+  identified by 'pepa';
+
+create database project;
 
 grant all
-  on simple.*
-  to simple@localhost;
+  on porject.*
+  to phepy@'%';
 
 flush privileges;
 
-use simple;
+use project;
 
 create table usuario (
     id bigint not null auto_increment primary key,

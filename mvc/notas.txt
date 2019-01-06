@@ -72,6 +72,7 @@ Modelos de interfaz necesarios
 - home
 
 - login
+- ha olvidado su contraseña
 - register
 - index
 - formulario edit ( self )
