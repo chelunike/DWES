@@ -39,4 +39,4 @@ $frontController = new FrontController($ruta, $accion);
 $frontController->doAction();
 
 // -- Respuesta del Controlador Frontal --
-echo $frontController->render();
+//echo $frontController->render();
