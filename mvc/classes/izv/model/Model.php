@@ -30,6 +30,10 @@ class Model {
         return $this->viewData;
     }
     
+    function getDatabase() {
+        return $this->db;
+    }
+    
     function set($name, $value) {
         $this->viewData[$name] =  $value;
         return $this;

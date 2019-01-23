@@ -2,6 +2,8 @@
 namespace izv\view;
 
 use izv\model\Model;
+use izv\tools\Reader;
+use izv\tools\Alert;
 use izv\tools\Tools;
 
 /**
@@ -20,10 +22,23 @@ class UserView extends View {
         
         require_once 'classes/vendor/autoload.php';
         
+        // Recojer datos (posible alert)
+        $type = Reader::read('a');
+        $r = Reader::read('r');
+        
+        if(isset($type)) {
+            if(!isset($r)) {
+                $r = 0;
+            }
+            $alert = Alert::getMessage($type, $r);
+            $data['alert'] = $alert;
+        }
+        
+        // Cargar Plantillas
         $loader = new \Twig_Loader_Filesystem('templates/user');
         $twig = new \Twig_Environment($loader);
         
-        return $twig->render($this->getModel()->get('template') . '.twig', $data);
+        return $twig->render($this->getModel()->get('template_file'), $data);
         //return Tools::print('Estas haciendo: ' . $accion) . Tools::view($data);
     }
     

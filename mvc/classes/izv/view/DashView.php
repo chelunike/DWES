@@ -3,6 +3,8 @@ namespace izv\view;
 
 use izv\model\Model;
 use izv\tools\Tools;
+use izv\tools\Reader;
+use izv\tools\Alert;
 
 /**
  * El view
@@ -19,6 +21,18 @@ class DashView extends View {
         $data = $this->getModel()->getViewData();
         
         require_once 'classes/vendor/autoload.php';
+        
+        // Recojer datos (posible alert)
+        $type = Reader::read('a');
+        $r = Reader::read('r');
+        
+        if(isset($type)) {
+            if(!isset($r)) {
+                $r = 0;
+            }
+            $alert = Alert::getMessage($type, $r);
+            $data['alert'] = $alert;
+        }
         
         $loader = new \Twig_Loader_Filesystem('templates/dashboard');
         $twig = new \Twig_Environment($loader);

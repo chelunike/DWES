@@ -1,0 +1,240 @@
+/* Importar recursos */
+/*	-- Fuentes -- */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@font-face {
+	font-family: 'NeueThin';
+	src: url('../fonts/Neue/NeueHaasUnicaPro-Thin.ttf');
+}
+@font-face {
+	font-family: 'NeueBlack';
+	src: url('../fonts/Neue/NeueHaasUnicaPro-XBlack.ttf');
+}
+@font-face {
+	font-family: 'Flux';
+	src: url('../fonts/Flux/flux.ttf');
+	src: url('../fonts/Flux/flux.woff');
+}
+
+/* Estilos de fuentes */
+h1 { font: 10em 'Flux', sans-serif;}
+h2 { font: 3.6em 'NeueThin', sans-serif;}
+h3 { font: 1.66em 'Source Code Pro Bold ', sans-serif;}
+h4 { font: 2em 'Source Sans Pro Bold', sans-serif;}
+h5 { font: 1em  'Lato Light', 'NeueThin', sans-serif;}
+cite { font: 1.333em 'NeueThin', serif;}
+p, code { font: 1.233em 'Source Code Pro', serif;}
+a { font: 1.666em 'Source Code Pro', sans-serif; text-decoration: none;}
+
+h3 { color: #306998;}
+h4 { color: #306998;}
+
+h2 { text-transform: uppercase;}
+h1, a { color: white;}
+
+/* Header */
+header {
+	background-color: #333333;
+	background-image: url('../img/fondoProjects.jpg');
+	background-position: bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	display: flex;
+
+	flex-flow: row wrap;
+	align-content: space-between;
+	justify-content: center;
+}
+
+header nav { width: 100%; }
+
+header h1 { width: 100%; text-align: center; margin: 20px 0; }
+header p { text-align: center; margin-top: auto; }
+
+header .logo { flex: 200px 0 0;}
+.logo img { 
+	width: 100%;
+	object-position: center; object-fit: contain;
+}
+
+header canvas {
+	position: absolute;
+	width: 100%; height: 100%;
+
+}
+
+/* Nav */
+/* Menu Phone hidden */
+.hidden { display: none;}
+#menuIco {
+	display: none;
+	position: absolute;
+	width: 40px;
+	top: 1%; right: 1%;
+	color: #FFFFFF;
+	z-index: 10;
+}
+#menuIco:hover { cursor: pointer; }
+
+.menu {
+	height: 100%;
+	position: absolute;
+	right: 0%;
+	display: none;
+	
+	flex-flow: column wrap; 
+	justify-content: center;
+	align-items: flex-end;
+	
+	background-color: rgba(51, 51, 51, .6);
+	color: white;
+}
+
+.menu li { padding: 20px 0; width: 90%; border-bottom: 1px solid white; }
+.menu a { margin: 0 30px; white-space: nowrap; }
+
+nav { display: flex; justify-content: flex-end; align-items: center; }
+
+.list-nav {	display: flex; justify-content: space-around; z-index: 10; }
+.list-nav li a { display: block; padding: 10px 25px;}
+
+.scroll { width: 100%; /*position: absolute; bottom: 10px;*/ text-align: center; z-index: 11; }
+.scroll a { margin: 0 auto; }
+.scroll img { width: 100px; padding-bottom: -20px;}
+
+/* --- Animaciones --- */
+/* - Header - */
+/*.scroll img:hover { width: 90px; transition: all .5s; }
+.list-nav a:hover {	font-size: 1.8999em; transition: font-size .3s ease-in-out; }*/
+.menu li:hover { width: 120%; transition: all 1.5s; }
+.titanic { float: none; }
+@keyframes showRigth {
+	from { transform: translate(100%, 0%); }
+	to { transform: translate(0%, 0%); }
+}
+.menu { animation: showRigth .5s 1 ease-in; }
+.menuIco { width: 120%; transition: all 1.5s; }
+/* - Footer - */
+.mainBar a:hover { font-size: 1.2323em; transition: font-size .3s ease-in-out; }
+@keyframes girarIcon {
+	from { transform: rotate(0deg); }
+	25% { transform: rotate(-45deg); }
+	75% { transform: rotate(45deg); }
+	to { transform: rotate(0deg); }
+}
+.social img:hover { animation: girarIcon .5s; 
+  transform-origin: center top; }
+.terms a:hover { text-decoration: underline; }
+
+/*
+
+*/
+
+/* -- Estilos Seccion Cabecera -- */
+section .info-header {
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+
+	background-color: #4B8BBE;
+	color: white;
+}
+
+/* -- Estilos Seccion Cuerpo -- */
+section .project-container {
+	width: 100%;
+	margin: 2% 0; padding: 1%;
+
+	display: flex;
+
+	flex-flow: row wrap;
+	align-content: space-between;
+	justify-content: space-around;
+}
+
+/* -- Estilos Project -- */
+.project-container .project { flex: 600px 0 1; ; margin: 10px;}
+.thumbnail img {
+	width: 100%; height: 300px;
+	object-fit: cover;
+	object-position: center;
+}
+.project .info-project {
+	padding: 15px;
+	background-color: #e8e8e8;
+}
+
+.info-project button {
+	width: 150px;
+	margin: 5px; padding: 5px;
+	border: none;
+	background-color: #646464;	
+}
+.info-project button a { font: 1.358em 'Source Code Pro',sans-serif;}
+
+
+/* -- Estilo Footer -- */
+footer { width: 100%; background-color: rgb(236, 237, 239);}
+
+footer .footer-bar {
+	display: flex;
+
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+.footer-bar h4 { margin: 10px;}
+.footer-bar a, .footer-bar ul li a { color: #646464; font-size: 1.25em;}
+.footer-bar .col { flex: 450px 0 1; padding: 5%;}
+
+
+footer .logo { width: 75%; margin: 5%;}
+
+.social {
+	width: 100%;
+	margin: 10px;
+	display: flex;
+
+	flex-flow: row;
+	justify-content: space-around;
+}
+.social img { width: 50px; height: 50px; margin: 1%; object-fit: contain;}
+
+footer .bottom-bar { 
+	width: 100%;
+	display: flex;
+
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	background-color: #646464;
+}
+.bottom-bar p { display: inline-block; font-size: .8em; color: #e8e8e8; margin: 10px;}
+.bottom-bar p:first-child { margin-right: auto;}
+
+/* Punto de corte Tablet */
+@media only screen and (max-width: 768px) {
+
+	/* Paso a nav movil */
+	header  .list-nav { display: none; }
+	#menuIco { display: inline-block; }
+	.menu { display: flex; }
+
+	/* Ajuster Info */
+
+
+	/* Ajustes de Footer */
+	footer .logo { width: 100%;}
+	footer .logo:before { display: none;}
+	footer .logo:after { display: none;}
+	footer { flex-flow: column wrap; }
+}
+
+/* Punto de corte Movil */
+@media only screen and (max-width: 720px) {
+
+	h2 { font-size: 5em; }
+	p { padding: 10px; font-size: .9999999em; }
+
+	/* Ajustes de Footer */
+
+}

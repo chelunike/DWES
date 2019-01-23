@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Esto es algo">
+    <meta name="author" content="yo :)">
+    
+    <title>Python | {{ title }}</title>
+    
+    <base href="{{ base_url }}" />
+    
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/animate-css/vivify.min.css">
+    
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="assets/css/site.min.css">
+
+    <script src="assets/bundles/libscripts.bundle.js" defer></script>    
+    <script src="assets/bundles/vendorscripts.bundle.js" defer></script>
+    <script src="assets/bundles/mainscripts.bundle.js" defer></script>
+    
+    {% block head %}{% endblock %}
+    
+</head>
+
+<body class="theme-orange">
+    <div class="pattern">
+        <span class="red"></span>
+        <span class="indigo"></span>
+        <span class="blue"></span>
+        <span class="green"></span>
+        <span class="orange"></span>
+    </div>
+    <div class="auth-main particles_js">
+        <div class="auth_div vivify popIn">
+            <div class="auth_brand">
+                <a class="navbar-brand" href="index"><img src="assets/img/logo.png" width="50" height="50" class="d-inline-block align-top mr-2" alt="">Python</a>                                                
+            </div>
+            <div class="card">
+                {{ alert | raw }}
+                <div class="body">
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        <div id="particles-js"></div>
+    </div>
+    <!-- END WRAPPER -->
+</body>
+</html>

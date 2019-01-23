@@ -1,0 +1,271 @@
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+
+        <div class="navbar-left">
+            <div class="navbar-btn">
+                <a href="index"><img src="assets/img/logo.png" alt="Python Logo" class="img-fluid logo"></a>
+                <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                        <i class="icon-envelope"></i>
+                        <span class="notification-dot bg-green">4</span>
+                    </a>
+                    
+                    <!-- Mensajes nav -->
+                    <ul class="dropdown-menu right_chat email vivify fadeIn">
+                        <li class="header green">You have 4 New eMail</li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <div class="avtar-pic w35 bg-red"><span>FC</span></div>
+                                    <div class="media-body">
+                                        <span class="name">James Wert <small class="float-right">Just now</small></span>
+                                        <span class="message">Update GitHub</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <div class="avtar-pic w35 bg-indigo"><span>FC</span></div>
+                                    <div class="media-body">
+                                        <span class="name">Folisise Chosielie <small class="float-right">12min ago</small></span>
+                                        <span class="message">New Messages</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Louis Henry <small class="float-right">38min ago</small></span>
+                                        <span class="message">Design bug fix</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="media mb-0">
+                                    <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Debra Stewart <small class="float-right">2hr ago</small></span>
+                                        <span class="message">Fix Bug</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Notificaciones -->
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                        <i class="icon-bell"></i>
+                        <span class="notification-dot bg-azura">4</span>
+                    </a>
+                    <ul class="dropdown-menu feeds_widget vivify fadeIn">
+                        <li class="header blue">You have 4 New Notifications</li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="feeds-left bg-red"><i class="fa fa-check"></i></div>
+                                <div class="feeds-body">
+                                    <h4 class="title text-danger">Issue Fixed <small class="float-right text-muted">9:10 AM</small></h4>
+                                    <small>WE have fix all Design bug with Responsive</small>
+                                </div>
+                            </a>
+                        </li>                               
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="feeds-left bg-info"><i class="fa fa-user"></i></div>
+                                <div class="feeds-body">
+                                    <h4 class="title text-info">New User <small class="float-right text-muted">9:15 AM</small></h4>
+                                    <small>I feel great! Thanks team</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="feeds-left bg-orange"><i class="fa fa-question-circle"></i></div>
+                                <div class="feeds-body">
+                                    <h4 class="title text-warning">Server Warning <small class="float-right text-muted">9:17 AM</small></h4>
+                                    <small>Your connection is not private</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="feeds-left bg-green"><i class="fa fa-thumbs-o-up"></i></div>
+                                <div class="feeds-body">
+                                    <h4 class="title text-success">2 New Feedback <small class="float-right text-muted">9:22 AM</small></h4>
+                                    <small>It will give a smart finishing to your site</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Mega menu -->
+                <li><a href="javascript:void(0);" class="megamenu_toggle icon-menu" title="Mega Menu">Mega</a></li>
+            </ul>
+        </div>
+        <!-- Nav derecha -->
+        <div class="navbar-right">
+            <div id="navbar-menu">
+                <ul class="nav navbar-nav">
+                    <!-- Form de busqueda
+                    <li>
+                        <form id="navbar-search" class="navbar-form search-form">
+                            <input value="" class="form-control" placeholder="Search here..." type="text">
+                            <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                        </form>
+                    </li>-->                        
+                    <!-- Chat <li><a href="javascript:void(0);" class="right_toggle icon-menu" title="Right Menu"><i class="icon-bubbles"></i><span class="notification-dot bg-pink">2</span></a></li>-->
+                    <li><a href="user/logout" class="icon-menu"><i class="icon-power"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+</nav>
+
+<!-- Mega menu -->
+<div id="megamenu" class="megamenu particles_js">
+    <a href="javascript:void(0);" class="megamenu_toggle btn btn-danger"><i class="icon-close"></i></a>
+    <div class="container">            
+        <div class="row clearfix">
+            <div class="col-12">
+                <ul class="q_links">
+                    <li><a href="app-inbox.html"><i class="icon-envelope"></i><span>Inbox</span></a></li>
+                    <li><a href="app-chat.html"><i class="icon-bubbles"></i><span>Messenger</span></a></li>
+                    <li><a href="app-calendar.html"><i class="icon-calendar"></i><span>Event</span></a></li>
+                    <li><a href="dashboard/profile"><i class="icon-user"></i><span>Profile</span></a></li>
+                    <li><a href="page-invoices.html"><i class="icon-printer"></i><span>Invoice</span></a></li>
+                    <li><a href="page-timeline.html"><i class="icon-list"></i><span>Timeline</span></a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card w_card3">
+                    <div class="body">
+                        <div class="text-center"><i class="icon-picture text-info"></i>
+                            <h4 class="m-t-25 mb-0">104 Picture</h4>
+                            <p>Your gallery download complete</p>
+                            <a href="javascript:void(0);" class="btn btn-info btn-round">Download now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card w_card3">
+                    <div class="body">
+                        <div class="text-center"><i class="icon-diamond text-success"></i>
+                            <h4 class="m-t-25 mb-0">813 Point</h4>
+                            <p>You are doing great job!</p>
+                            <a href="javascript:void(0);" class="btn btn-success btn-round">Read now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card w_card3">
+                    <div class="body">
+                        <div class="text-center"><i class="icon-social-twitter text-primary"></i>
+                            <h4 class="m-t-25 mb-0">3,756</h4>
+                            <p>New Followers on Twitter</p>
+                            <a href="javascript:void(0);" class="btn btn-primary btn-round">Find more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Anyone send me a message
+                        <div class="float-right">
+                            <label class="switch">
+                                <input type="checkbox" checked="">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Anyone seeing my profile page
+                        <div class="float-right">
+                            <label class="switch">
+                                <input type="checkbox" checked="">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Anyone posts a comment on my post
+                        <div class="float-right">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="particles-js"></div>
+</div>
+
+<!--SIDEBAR  -->
+<div id="left-sidebar" class="sidebar">
+    <div class="navbar-brand">
+        <a href="index"><img src="assets/img/logo.png" alt="Python Logo" class="img-fluid logo"><span>Python</span></a>
+        <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i class="lnr lnr-menu fa fa-chevron-circle-left"></i></button>
+    </div>
+    <div class="sidebar-scroll">
+        <!-- User account -->
+        <div class="user-account">
+            <div class="user_div">
+                <img src="
+                {% if (user_img) %}
+                    {{ user_img|raw }}
+                {% else %}
+                    assets/images/user.png
+                {% endif %}" class="user-photo" alt="User Profile Picture">
+            </div>
+            <div class="dropdown">
+                <span>Welcome,</span>
+                <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>{{ user.alias }}</strong></a>
+                <ul class="dropdown-menu dropdown-menu-right account vivify flipInY">
+                    <li><a href="dashboard/profile"><i class="icon-user"></i>My Profile</a></li>
+                    <li><a href="dashboard/email"><i class="icon-envelope-open"></i>Messages</a></li>
+                    <li><a href="dashboard"><i class="icon-settings"></i>Settings</a></li>
+                    <li class="divider"></li>
+                    <li><a href="user/logout"><i class="icon-power"></i>Logout</a></li>
+                </ul>
+            </div>                
+        </div>
+        <!-- NAV -->
+        <nav id="left-sidebar-nav" class="sidebar-nav">
+            <ul id="main-menu" class="metismenu">
+                <li class="header">Main</li>
+                <li><a href="index"><i class="icon-home"></i><span>My Page</span></a></li>
+                <li class="active"><a href="dashboard"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
+                <li class="header">App</li>
+                <!--<li><a href="index/contact"><i class="icon-book-open"></i><span>Contact List</span></a></li>-->
+                <li><a href="dashboard/email"><i class="icon-envelope"></i><span>Email</span></a></li>
+                <li><a href="dashboard/calendar"><i class="icon-calendar"></i><span>Calendar</span></a></li>                    
+                <!-- Dropdown examples
+                <li>
+                    <a href="#uiElements" class="has-arrow"><i class="icon-tag"></i><span>Icons</span></a>
+                    <ul>
+                        <li><a href="ui-icons.html">FontAwesome</a></li>
+                        <li><a href="ui-icons-line.html">Simple Line</a></li>
+                        <li><a href="ui-icons-themify.html">Themify Icon</a></li>
+                    </ul>
+                </li>-->
+                <li><a href="dashboard/map"><i class="icon-map"></i><span>Maps</span></a></li>
+            </ul>
+        </nav>     
+    </div>
+</div>

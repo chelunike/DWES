@@ -23,7 +23,9 @@ trait Comun{
     function get(){
         $array = array();
         foreach($this as $atributo => $valor){
-            $array[$atributo] = $valor;
+            //if(isset($valor)) {
+                $array[$atributo] = $valor;    
+            //}
         }
         return $array;
     }

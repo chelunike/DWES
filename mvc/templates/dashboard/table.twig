@@ -1,0 +1,28 @@
+<div class="table-responsive">
+    <table id="tablaUsuario" class="table table-hover table-custom spacing8">
+        <thead>
+            <tr> 
+                <th>#</th>
+                <th>Alias</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users_list %}
+                <tr>
+                    <td class="w60">
+                        <img src="
+                        {% if (user.picture) %}
+                            data:image/png;base64,{{ user.picture|raw }}
+                        {% else %}
+                            assets/images/user.png
+                        {% endif %}" data-toggle="tooltip" data-placement="top" title="Avatar Name" alt="Avatar" class="w35 rounded">
+                    </td>
+                    <td>{{ user.alias }}</td>
+                    <td>{{ user.nombre }}</td>
+                </tr>
+            {% endfor %}        
+        </tbody>
+    </table>
+</div>
+

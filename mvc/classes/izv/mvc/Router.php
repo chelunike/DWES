@@ -18,9 +18,9 @@ class Router {
     
     function __construct($ruta) {
         $this->rutas = array(
-            'index' => new Route('MainModel', 'MainView', 'MainController'),
+            'index' => new Route('Model', 'MainView', 'MainController'),
             'dashboard' => new Route('DashModel', 'DashView', 'DashController'),
-            'user'  => new Route('UserModel', 'UserView', 'UserController'),
+            'user'  => new Route('UserModel', 'UserView', 'UserController')
             //'ruta'  => new Route('modelo', 'vista', 'controlador'),
         );
         $this->ruta = strtolower($ruta);

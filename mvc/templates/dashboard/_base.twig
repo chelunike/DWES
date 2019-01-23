@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Sitio Principal">
+    <meta name="author" content="yo">    
+        
+    <title>Python | {{ title }}</title>
+    
+    <base href="{{ base_url }}" />
+    
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/vendor/animate-css/vivify.min.css">
+    
+    <link rel="stylesheet" href="assets/vendor/c3/c3.min.css"/>
+    
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="assets/css/site.min.css">
+    
+    <!-- Javascript -->
+    <script src="assets/bundles/libscripts.bundle.js" defer></script>
+    <script src="assets/bundles/vendorscripts.bundle.js" defer></script>
+    
+    <script src="assets/bundles/c3.bundle.js" defer></script>
+    
+    <script src="assets/bundles/mainscripts.bundle.js" defer></script>
+    <script src="assets/js/index.js" defer></script>
+    
+    <!-- Other things -->
+    {% block head %}{% endblock %}
+
+</head>
+<body class="theme-cyan">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img src="assets/img/logo.png" width="50" height="50" alt="Python"></div>
+        <p>Please wait...</p>        
+    </div>
+</div>
+
+<!-- Theme Setting -->
+<div class="themesetting">
+    <a href="javascript:void(0);" class="theme_btn"><i class="icon-magic-wand"></i></a>
+    <ul class="choose-skin list-unstyled mb-0">
+        <li data-theme="green"><div class="green"></div></li>
+        <li data-theme="orange"><div class="orange"></div></li>
+        <li data-theme="blush"><div class="blush"></div></li>
+        <li data-theme="cyan" class="active"><div class="cyan"></div></li>
+    </ul>
+</div>
+
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div>
+
+<div id="wrapper">
+    
+    {% include '_nav.twig' %}
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content">
+        <!-- Header -->
+        <div class="block-header">
+            <div class="row clearfix">
+                <div class="col-md-6 col-sm-12">
+                    <h1>Main Page</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#">Python</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <!-- Posibles alertas  -->
+            {{ alert|raw }}
+        </div>
+
+        <!-- Content section -->
+        <div class="container-fluid">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

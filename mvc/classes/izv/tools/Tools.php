@@ -28,6 +28,19 @@ class Tools {
         return $parts['dirname'] . '/';
     }
     
+    static function getFullUrl($route, $params=null) {
+        $url = self::url() . $route;
+        if($params !== null && is_array($params)) {
+            $url .= '?';
+            foreach ($params as $i => $value) {
+                $url .= urlencode($i) . '=' . urlencode($value);
+                if($i < count($params)-1) {
+                    $url .= '&';
+                }
+            }
+        }
+    }
+    
     static function encriptar($cadena, $coste = 10) {
         $opciones = array(
             'cost' => $coste
@@ -46,5 +59,13 @@ class Tools {
     static function verificarClave($claveSinEncriptar, $claveEncriptada) {
         return password_verify($claveSinEncriptar, $claveEncriptada);
     }
+    
+    static function verificarCaptcha($captcha, $secret) {
+        $response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret. '&response='. $captcha);
+        
+        $response = json_decode($response, true);
+        return $response["success"];
+    }
+    
     
 }

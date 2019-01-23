@@ -111,7 +111,8 @@ class Google_Service_ServiceConsumerManagement_Resource_ServicesTenancyUnits ext
   }
   /**
    * Delete a tenancy unit.  Before the tenancy unit is deleted, there should be
-   * no tenant resources in it. Operation. (tenancyUnits.delete)
+   * no tenant resources in it not in DELETED state. Operation.
+   * (tenancyUnits.delete)
    *
    * @param string $name Name of the tenancy unit to be deleted.
    * @param array $optParams Optional parameters.
@@ -157,7 +158,9 @@ class Google_Service_ServiceConsumerManagement_Resource_ServicesTenancyUnits ext
    * Removes specified project resource identified by tenant resource tag. It will
    * remove project lien with 'TenantManager' origin if that was added. It will
    * then attempt to delete the project. If that operation fails, this method
-   * fails. Operation. (tenancyUnits.removeProject)
+   * fails. After the project has been deleted, or if was already in DELETED
+   * state, resource metadata is permanently removed from the tenancy unit.
+   * Operation. (tenancyUnits.removeProject)
    *
    * @param string $name Name of the tenancy unit. Such as
    * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="yo">
+	<meta name="viewport" content="device-width , initial-scale=1.0">
+	
+	<title>Python {{ title }}</title>
+	
+	<base href="{{ base_url }}" />
+	
+	<link rel="shortcut icon" href="{{ template_folder }}assets/img/favicon.ico">
+
+	<link rel="stylesheet" type="text/css" href="{{ template_folder }}assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="{{ template_folder }}assets/css/{{ template_css }}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="{{ template_folder }}assets/js/scrooling.js"></script>
+	<script src="{{ template_folder }}assets/js/event.js" defer></script>
+	
+	{% block head %}{% endblock %}
+	
+</head>
+<body>
+	<div class="wrapper">
+	
+	{% block header %}{% endblock %}
+	
+	{% block content %}{% endblock %}
+	
+	{% block footer %}
+		<footer>
+			<div class="footer-bar">
+				<div class="col">
+					<h4>Our Page</h4>
+					<ul>
+						<li><a href="index">Home</a></li>
+						<li><a href="index/projects">Projects</a></li>
+						<li><a href="index/documentation">Documentation</a></li>
+						<li><a href="index/contact">Contact</a></li>
+					</ul>	
+				</div>
+				<div class="col">
+					<img class="logo" src="{{ template_folder }}assets/img/logo.png">
+					<!--<h4>Newsletter</h4>
+					<form>
+						<input type="email" name="email">
+						<input type="submit" name="Submit">
+					</form>-->
+					<div class="social">
+						<a href="#"><img src="{{ template_folder }}assets/img/fb.png" alt="Facebook" title="Visit our Facebook"/></a>
+						<a href="#"><img src="{{ template_folder }}assets/img/tw.png" alt="Twitter" title="Visit our Twiter"/></a>
+						<a href="#"><img src="{{ template_folder }}assets/img/yt.png" alt="YouTube" title="Visit our YouTube channel"/></a>
+						<a href="#"><img src="{{ template_folder }}assets/img/so.svg" alt="StackOverflow" title="We help you"/></a>
+						<a href="#"><img src="{{ template_folder }}assets/img/su.svg" alt="SuperUser" title="Born to be root"/></a>
+					</div>
+				</div>
+				<div class="col">
+					<h4>Community</h4>
+					<a href="#"><p>Forums</p></a>
+					<a href="#"><p>IRC Channels</p></a>
+					<a href="#"><p>Python Conferences</p></a>
+					<a href="#"><p>Community</p></a>
+					<a href="#"><p>FAQ</p></a>
+					<a href="#"><p>Python Books</p></a>
+				</div>
+			</div>
+			<div class="bottom-bar">
+				<p><a>&copy;Python Software Foundation 2019</a></p>
+				<p><a href="#">Privacy Policy</a><p>
+				<p><a href="#">Terms of use</a><p>
+				<p><a href="#">Cookies Privacy</a><p>
+			</div>
+		</footer>
+	{% endblock %}
+	
+	</div>	
+</body>
+</html>

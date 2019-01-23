@@ -4,7 +4,7 @@ namespace izv\tools;
 
 use izv\app\App;
 use izv\tools\Tools;
-use izv\data\Usuario;
+use izv\data\User;
 
 /**
  * @author yo
@@ -51,25 +51,36 @@ class Mail {
                     $service->users_messages->send('me', $mensaje);
                     $result = true;
                 } catch (\Exception $e) {
-                    echo ("Error en el envío del correo: " . $e->getMessage());
+                    //echo ("Error en el envío del correo: " . $e->getMessage());
                 }
             }
         }
         return $result;
     }
     
-    static function sendActivation(Usuario $usuario, $url){
+    static function sendActivation(User $usuario, $url){
         $to = $usuario->getCorreo();
-        $subject = 'Correo de Activacion del Sistema Patata';
+        $subject = 'Correo de Activacion del Sistema Python';
         //Proccess url
         $url = $url . '?code=';
         $code = Tools::encryptJWT(App::CODE, App::JWT_CODE);
         $id = Tools::encryptJWT($usuario->getId(), App::JWT_CODE);
         $url = $url . $code . $id;
-        $message = 'Ha sido registrado en el Sistema Patata. Abra el siguiente link para activar la cuenta: ' . $url;
-        echo $url;
+        $message = '<h3>Bienvenido '. $usuario->getNombre() .'</h3>';
+        $message .= 'Ha sido registrado en el Sistema Python. Abra el siguiente link para activar la cuenta.
+            <a href="' . $url . '">Activar Cuenta</a>';
         return self::sendMail($to, $subject, $message);
     }
+    
+    static function sendMailChange($usuario, $oldCorreo) {
+        $to = $oldCorreo;
+        $subject = 'Correo de Aviso del Sistema Python';
+        $message = '<h3>Querido '. $usuario->getNombre() .'</h3>';
+        $message .= 'Su correo ha sido cambiado en el Sistema Python. Vaya a su nueva cuenta de correo ('.$usuario->getCorreo().') para volver a activar la cuenta.
+            <a href="https://daw-p07470.c9users.io/server/proyectoMVC/user/login">Login</a>';
+        return self::sendMail($to, $subject, $message);
+    }
+    
     
     static function sendActivationP(Usuario $usuario) {
         $asunto = 'Correo de activación de la App: DWES IZV';

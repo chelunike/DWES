@@ -1,0 +1,70 @@
+{% extends '_base.twig' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row clearfix">
+        
+        <!-- Formulario -->
+        <div class="col-xl-9 col-lg-8 col-md-7">
+            <div class="card">
+                <div class="header">
+                    <h2>Add new user</h2>
+                </div>
+                <div class="body">                                    
+                    <hr>
+                    <form action="dashboard/doinsert" method="post">
+                        <div class="row clearfix">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">                                                
+                                    <input type="mail" name="correo" class="form-control" placeholder="Your Emaill" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">                                                
+                                    <input type="text" name="alias" class="form-control" placeholder="Nickname" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" name="clave" class="form-control" placeholder="Password" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <label>User Avatar</label>                                                  
+                                    <input type="file" name="fichero" class="form-control" placeholder="Avatar">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <ul class="list-group mb-3 tp-setting">
+                                    <li class="list-group-item">
+                                        Activo
+                                        <div class="float-right">
+                                            <label class="switch">
+                                                <input type="checkbox" name="activo" value="1">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        Administrador
+                                        <div class="float-right">
+                                            <label class="switch">
+                                                <input type="checkbox" name="administrador"  value="1">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-round btn-primary"  value="Insert"> &nbsp;&nbsp;
+                        <input type="reset" class="btn btn-round btn-default" value="Cancel">
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

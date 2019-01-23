@@ -22,8 +22,31 @@ class MainController extends Controller {
     
     // -- Acciones -- 
     function action() {
-        $this->getModel()->set('template_file', 'index.html');
+        $this->getModel()->set('template_file', 'index.twig');
+        $this->getModel()->set('template_css', 'styleHome.css');
         $this->getModel()->set('title', 'Main Controller');
+        $this->getModel()->set('is_logged', $this->getSession()->isLogged());
+    }
+    
+    function projects() {
+        $this->getModel()->set('template_file', 'projects.twig');
+        $this->getModel()->set('template_css', 'styleProjects.css');
+        $this->getModel()->set('title', 'Main Controller');
+        $this->getModel()->set('is_logged', $this->getSession()->isLogged());
+    }
+    
+    function documentation() {
+        $this->getModel()->set('template_file', 'documentation.twig');
+        $this->getModel()->set('template_css', 'styleDocumentation.css');
+        $this->getModel()->set('title', 'Main Controller');
+        $this->getModel()->set('is_logged', $this->getSession()->isLogged());
+    }
+    
+    function contact() {
+        $this->getModel()->set('template_file', 'contact.twig');
+        $this->getModel()->set('template_css', 'styleContact.css');
+        $this->getModel()->set('title', 'Main Controller');
+        $this->getModel()->set('is_logged', $this->getSession()->isLogged());
     }
     
     function patata() {

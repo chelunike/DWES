@@ -25,12 +25,11 @@ class Controller {
         $this->model->set('Info', ' Cuentame mas :)');
     }
     
-    function patata() {
+    /*function patata() {
         $this->model->set('Patata', ':)');
         $this->model->set('Info', ' Top secret :)');
         $this->model->set('Secret', 'Cowsay for the best :)');
-    }
-    
+    }*/
     
     function getSession() {
         return $this->sesion;

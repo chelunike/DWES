@@ -1,0 +1,114 @@
+{% extends 'base.twig' %}
+
+{% block header %}
+	<header id="top">
+		<nav>
+		    <ul class="list-nav">
+				<li><a href="index">Home</a></li>
+				<li><a href="index/projects">Projects</a></li>
+				<li><a href="index/documentation">Documentation</a></li>
+				<li><a href="index/contact">Contact</a></li>
+				{% if is_logged %}
+				    <li><a href="user/profile">Profile</a></li>
+				    {% if is_admin %}
+				        <li><a href="dashboard">Admin Area</a></li>
+				    {% endif %}
+				    <li><a href="user/logout">Logout</a></li>
+				{% else %}
+				    <li><a href="user/login">Login</a></li>
+				    <li><a href="user/register">Sing Up</a></li>
+				{% endif %}
+			</ul>
+			<img src="{{ template_folder }}{{ template_folder }}assets/img/menu.svg" id="menuIco" alt="Menu" />
+		</nav>
+		<ul id="menu" class="hidden">
+			<li><a href="#top">Home</a></li>
+			<li><a href="index/project">Projects</a></li>
+			<li><a href="index/documentation">Documentation</a></li>
+			<li><a href="index/contact">Contact</a></li>
+		</ul>
+		<h1>Projects</h1>
+
+	</header>
+{% endblock %}
+
+{% block content %}
+	<section>
+		<div class="info-header">
+			<h2>Python & Raspberry <PICTURE></PICTURE> Projects</h2>
+			<p>
+				There are no secrets to success. It is the result of preparation, hard work, and learning from failure.
+			</p>
+		</div>
+	</section>
+	<section>
+		<div class="project-container">
+			<div class="project">
+				<div class="thumbnail"><img src="{{ template_folder }}assets/img/project1.jpg"></div>
+				<div class="info-project">
+					<h3>Raspberry Pi Radio Station</h3>
+					<h5>By chelunike</h5>
+					<p>
+						Create your own radio station, with the music you want
+					</p>
+					<button><a href="">Learn more</a></button>
+				</div>
+			</div>
+			<div class="project">
+				<div class="thumbnail"><img src="{{ template_folder }}assets/img/project2.jpg"></div>
+				<div class="info-project">
+					<h3>Bitcoin Monitor</h3>
+					<h5>By: bysemaryx</h5>
+					<p>
+						Keep an eye on your bitcoin wallet and the state of the bitcoin market.
+					</p>
+					<button><a href="">Learn more</a></button>
+				</div>
+			</div>
+			<div class="project">
+				<div class="thumbnail"><img src="{{ template_folder }}assets/img/project3.jpg"></div>
+				<div class="info-project">
+					<h3>Python & Arduino Basic for kids</h3>
+					<h5>By: hioutusen</h5>
+					<p>
+						How to's for kids projects. A basic stated pack.
+					</p>
+					<button><a href="">Learn more</a></button>
+				</div>
+			</div>
+			<div class="project">
+				<div class="thumbnail"><img src="{{ template_folder }}assets/img/project4.jpg"></div>
+				<div class="info-project">
+					<h3>Error debuger with pycharm</h3>
+					<h5>By chelunike</h5>
+					<p>
+						Debug your projects with a project, that's make find and catch errors more easy.
+					</p>
+					<button><a href="">Learn more</a></button>
+				</div>
+			</div>
+			<div class="project">
+				<div class="thumbnail"><img src="{{ template_folder }}assets/img/project5.jpg"></div>
+				<div class="info-project">
+					<h3>Big data with python</h3>
+					<h5>By: chelunike</h5>
+					<p>
+						Proccess big data information faster than before with a big library for big data :).
+					</p>
+					<button><a href="">Learn more</a></button>
+				</div>
+			</div>
+			<div class="project">
+				<div class="thumbnail"><img src="{{ template_folder }}assets/img/project6.jpg"></div>
+				<div class="info-project">
+					<h3>Neural Networks with Python</h3>
+					<h5>By: neomode</h5>
+					<p>
+						Neural network to take a look into design. And valorate it with python. :)
+					</p>
+					<button><a href="">Learn more</a></button>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

@@ -1,0 +1,310 @@
+/* Importar recursos */
+/*	-- Fuentes -- */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@font-face {
+	font-family: 'NeueThin';
+	src: url('../fonts/Neue/NeueHaasUnicaPro-Thin.ttf');
+}
+@font-face {
+	font-family: 'NeueBlack';
+	src: url('../fonts/Neue/NeueHaasUnicaPro-XBlack.ttf');
+}
+@font-face {
+	font-family: 'Flux';
+	src: url('../fonts/Flux/flux.ttf');
+	src: url('../fonts/Flux/flux.woff');
+}
+
+/* Estilos de fuentes */
+h1 { font: 10em 'Flux', sans-serif;}
+h2 { font: 3.6em 'NeueThin', sans-serif;}
+h3 { font: 1.66em 'Flux', sans-serif;}
+h4 { font: 2em 'Source Sans Pro Bold', sans-serif;}
+h5 { font: 1.33em  'Lato Light', 'NeueThin', sans-serif;}
+cite { font: 1.333em 'NeueThin', serif;}
+p, code { font: 1.333em 'Source Code Pro', serif;}
+a { font: 1.666em 'Source Code Pro', sans-serif; text-decoration: none;}
+
+
+h4 { color: #306998;}
+
+h2, h5 { text-transform: uppercase;}
+h1, h3, .cite, a { color: white;}
+
+/* Header */
+header { 
+	height: 100%;
+	background-color: #333333;
+	background-image: url('../img/fondoHome.jpg');
+	background-position: center 15%;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	display: flex;
+
+	flex-flow: row wrap;
+	align-content: space-between;
+	justify-content: center;
+}
+
+header nav { width: 100%; }
+
+header h1 { width: 100%; text-align: center; margin: 20px 0; }
+header p { text-align: center; margin-top: auto; }
+
+header .logo { flex: 200px 0 0;}
+.logo img { 
+	width: 100%;
+	object-position: center; object-fit: contain;
+}
+
+header canvas {
+	position: absolute;
+	width: 100%; height: 100%;
+}
+
+/* Nav */
+
+/* Menu Phone hidden */
+.hidden { display: none;}
+#menuIco {
+	display: none;
+	position: absolute;
+	width: 40px;
+	top: 1%; right: 1%;
+	color: #FFFFFF;
+	z-index: 10;
+}
+#menuIco:hover { cursor: pointer; }
+
+.menu {
+	height: 100%;
+	position: absolute;
+	right: 0%;
+	display: none;
+	
+	flex-flow: column wrap; 
+	justify-content: center;
+	align-items: flex-end;
+	
+	background-color: rgba(51, 51, 51, .6);
+	color: white;
+}
+
+.menu li { padding: 20px 0; width: 90%; border-bottom: 1px solid white; }
+.menu a { margin: 0 30px; white-space: nowrap; }
+
+nav { display: flex; justify-content: flex-end; align-items: center; }
+
+.list-nav {	display: flex; justify-content: space-around; z-index: 10; }
+.list-nav li a { display: block; padding: 10px 25px;}
+
+.scroll { width: 100%; /*position: absolute; bottom: 10px;*/ text-align: center; z-index: 11; }
+.scroll a { margin: 0 auto; }
+.scroll img { width: 100px; padding-bottom: -20px;}
+
+/* --- Animaciones --- */
+/* - Header - */
+/*.scroll img:hover { width: 90px; transition: all .5s; }
+.list-nav a:hover {	font-size: 1.8999em; transition: font-size .3s ease-in-out; }*/
+.menu li:hover { width: 120%; transition: all 1.5s; }
+.titanic { float: none; }
+@keyframes showRigth {
+	from { transform: translate(100%, 0%); }
+	to { transform: translate(0%, 0%); }
+}
+.menu { animation: showRigth .5s 1 ease-in; }
+.menuIco { width: 120%; transition: all 1.5s; }
+/* - Footer - */
+.mainBar a:hover { font-size: 1.2323em; transition: font-size .3s ease-in-out; }
+@keyframes girarIcon {
+	from { transform: rotate(0deg); }
+	25% { transform: rotate(-45deg); }
+	75% { transform: rotate(45deg); }
+	to { transform: rotate(0deg); }
+}
+.social img:hover { animation: girarIcon .5s; 
+  transform-origin: center top; }
+.terms a:hover { text-decoration: underline; }
+
+/*
+
+*/
+
+/* -- Estilos Seccion 1 -- */
+section#sector1 {
+	display: flex;
+
+	flex-flow: row wrap;
+	align-content: center;
+	justify-content: space-between;
+
+	background-color: black;
+	color: white;
+}
+
+.image { flex: 650px 0 1; margin: 8% 0;}
+.image img { width: 100%; object-fit: cover;}
+
+#sector1 .info-box {
+	flex: 650px 0 1;
+	margin: 5%; padding: 15px; 
+}
+.info-box h2 { margin: 5% 0;}
+
+/* -- Estilos Sector 2 -- */
+section#sector2 {
+	display: flex;
+	
+	flex-flow: row wrap;
+	align-content: center;
+	justify-content: space-around;
+
+	background-color: black;
+	color: white;	
+}
+
+#sector2 .image{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#sector2 .info-box {
+	flex: 750px 0 1;
+	margin: 5%; padding: 15px; 
+}
+#sector2 h3 { padding-left: 15px; color: #4b8bbe;}
+
+/* -- Estilos Sector 3  -- */
+
+/* -- Sector 3 -- */
+section#sector3 {
+	display: flex;
+
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+#sector3 h3 { color: black; padding: 10px;}
+#sector3 .info-box {
+	flex: 650px 0 1;
+	padding: 2.5%;
+}
+
+#sector3 code pre { padding: 5px;}
+#sector3 .image {
+	flex: 750px 0 1;	
+	margin: 0;
+}
+
+/* -- Python REPL  -- */
+.python-repl { flex: 80%;}
+.python-repl iframe {  width: 100%; height: 600px;}
+
+#sector3 .bar {
+	flex: 100%;
+	display: flex;
+
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+button {
+	width: 200px;
+	margin: 5px; padding: 10px;
+	border: none;
+	border-radius: 2px;
+	color: white; 
+	background-color: #306998;
+}
+button a { font: 2em 'Flux',sans-serif;}
+button img {
+	height: 35px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* -- Sectior 4 -- */
+section#sector4 {
+	display: flex;
+
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.guido-photo {
+	height: 400px;
+	clip-path: polygon(5% 10%, 90% 0%, 80% 90%, 10% 100%);
+}
+
+#sector4 .info-box { padding: 5%;}
+#sector4 .info-box p { margin: 5% 0;}
+
+.left-box { flex: 550px;}
+.right-box { flex: 550px;}
+
+
+/* -- Estilo Footer -- */
+footer { width: 100%; background-color: rgb(236, 237, 239);}
+
+footer .footer-bar {
+	display: flex;
+
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+.footer-bar h4 { margin: 10px;}
+.footer-bar a, .footer-bar ul li a { color: #646464; font-size: 1.25em;}
+.footer-bar .col { flex: 450px 0 1; padding: 5%;}
+
+
+footer .logo { width: 75%; margin: 5%;}
+
+.social {
+	width: 100%;
+	margin: 10px;
+	display: flex;
+
+	flex-flow: row;
+	justify-content: space-around;
+}
+.social img { width: 50px; height: 50px; margin: 1%; object-fit: contain;}
+
+footer .bottom-bar { 
+	width: 100%;
+	display: flex;
+
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	background-color: #646464;
+}
+.bottom-bar p { font-size: .8em; color: #e8e8e8; margin: 10px;}
+.bottom-bar p:first-child { margin-right: auto;}
+
+/* Punto de corte Tablet */
+@media only screen and (max-width: 768px) {
+
+	/* Paso a nav movil */
+	header  .list-nav { display: none;}
+	#menuIco { display: inline-block;}
+	.menu { display: flex;}
+
+	/* Ajuster Info */
+
+
+	/* Ajustes de Footer */
+
+}
+
+/* Punto de corte Movil */
+@media only screen and (max-width: 720px) {
+
+	h2 { font-size: 5em; }
+	p { padding: 10px; font-size: .9999999em; }
+
+	/* Ajustes de Footer */
+
+}

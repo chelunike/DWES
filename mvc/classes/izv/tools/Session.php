@@ -60,4 +60,8 @@ class Session {
         return $this;
     }
     
+    function isRoot() {
+        return $this->getLogin()->getAdministrador();
+    }
+    
 }

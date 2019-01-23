@@ -1,0 +1,117 @@
+{% extends 'base.twig' %}
+
+
+{% block header %}
+	<header id="top">
+		<nav>
+	    <ul class="list-nav">
+			<li><a href="#top">Home</a></li>
+			<li><a href="index/projects">Projects</a></li>
+			<li><a href="index/documentation">Documentation</a></li>
+			<li><a href="index/contact">Contact</a></li>
+			{% if is_logged %}
+			    <li><a href="user/profile">Profile</a></li>
+			    {% if is_admin %}
+			        <li><a href="dashboard">Admin Area</a></li>
+			    {% endif %}
+			    <li><a href="user/logout">Logout</a></li>
+			{% else %}
+			    <li><a href="user/login">Login</a></li>
+			    <li><a href="user/register">Sing Up</a></li>
+			{% endif %}
+		</ul>
+		<img src="{{ template_folder }}assets/img/menu.svg" id="menuIco" alt="Menu" />
+	</nav>
+	<ul id="menu" class="hidden">
+		<li><a href="#top">Home</a></li>
+		<li><a href="index/project">Projects</a></li>
+		<li><a href="index/documentation">Documentation</a></li>
+		<li><a href="index/contact">Contact</a></li>
+	</ul>
+		<h1>Documentation</h1>
+
+	</header>
+{% endblock %}
+
+{% block content %}
+	<div class="content">
+		<aside>
+			<h4>Index</h4>
+			<label>Version: </label>
+			<select>
+				<optgroup label="3.X.X">
+					<option>3.7.2</option>
+					<option>3.6</option>
+					<option>3.5</option>
+					<option>3.4</option>
+					<option>3.3</option>
+					<option>3.2</option>
+					<option>3.1</option>
+				</optgroup>
+				<optgroup label="2.X.X">
+					<option>2.6</option>
+					<option>2.5</option>
+					<option>2.4</option>
+					<option>2.3</option>
+				</optgroup>
+			</select>
+			<h5><i class="fas fa-angle-right"></i> Tutorial</h5>
+			<ol>
+				<li></li>
+			</ol>
+			<h5><i class="fas fa-angle-right"></i> Library Reference</h5>
+			<h5><i class="fas fa-angle-right"></i> Language Reference</h5>
+			<h5><i class="fas fa-angle-right"></i> Python Setup & Usage</h5>
+			<h5><i class="fas fa-angle-right"></i> Python HowTos</h5>
+			<h5><i class="fas fa-angle-right"></i> Installing Python Modules</h5>
+			<h5><i class="fas fa-angle-right"></i> Distributing Python Modules</h5>
+			<h5><i class="fas fa-angle-right"></i> Extending & Embedding</h5>
+			<h5><i class="fas fa-angle-right"></i> Python/C API</h5>
+			<h5><i class="fas fa-angle-right"></i> FAQs</h5>
+			<h5><i class="fas fa-angle-right"></i> Search Page</h5>
+			<h5><i class="fas fa-angle-right"></i> Glossary</h5>
+			<h5><i class="fas fa-angle-right"></i> History & License of Python</h5>
+			<h5><i class="fas fa-angle-right"></i> CopyRight</h5>
+		</aside>
+		<section>
+			<h2>Python 3.7.2 Documentation</h2>
+			<h2>Index</h2>
+			<p>
+				Welcome! This is the documentation for Python 3.7.2.
+			</p>
+			<h3>What's new in Python 3.7?</h3>
+			<p>or all "What's new" documents since 2.0</p>
+			<h3>Tutorial</h3>
+			<p>start here</p>
+			<h3>Library Reference</h3>
+			<p>keep this under your pillow</p>
+			<h3>Language Reference</h3>
+			<p>describes syntax and language elements</p>
+			<h3>Python Setup and Usage</h3>
+			<p>how to use Python on different platforms</p>
+			<h3>Python HOWTOs</h3>
+			<p>in-depth documents on specific topics</p>
+			<h3>Installing Python Modules</h3>
+			<p>installing from the Python Package Index & other sources</p>
+			<h3>Distributing Python Modules</h3>
+			<p>publishing modules for installation by others</p>
+			<h3>Extending and Embedding</h3>
+			<p> tutorial for C/C++ programmers</p>
+			<h3>Python/C API</h3>
+			<p> reference for C/C++ programmers</p>
+			<h3>FAQs</h3>
+			<p> frequently asked questions (with answers!)</p>
+			<h3>Global Module Index</h3>
+			<p> quick access to all modules</p>
+			<h3>Glossary</h3>
+			<p> the most important terms explained</p>
+			<h3>Search page</h3>
+			<p> search this documentation</p>
+			<h3>History and License of Python</h3>
+			<h3>Copyright</h3>
+			<ol>
+				<li></li>
+			</ol>
+		</section>
+	</div>
+{% endblock %}

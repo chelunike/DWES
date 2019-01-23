@@ -1,0 +1,80 @@
+{% extends 'base.twig' %}
+
+{% block header %}
+	<header id="top">
+		<nav>
+		    <ul class="list-nav">
+				<li><a href="#top">Home</a></li>
+				<li><a href="index/projects">Projects</a></li>
+				<li><a href="index/documentation">Documentation</a></li>
+				<li><a href="index/contact">Contact</a></li>
+				{% if is_logged %}
+				    <li><a href="user/profile">Profile</a></li>
+				    {% if is_admin %}
+				        <li><a href="dashboard">Admin Area</a></li>
+				    {% endif %}
+				    <li><a href="user/logout">Logout</a></li>
+				{% else %}
+				    <li><a href="user/login">Login</a></li>
+				    <li><a href="user/register">Sing Up</a></li>
+				{% endif %}
+			</ul>
+			<img src="{{ template_folder }}assets/img/menu.svg" id="menuIco" alt="Menu" />
+		</nav>
+		<ul id="menu" class="hidden">
+			<li><a href="#top">Home</a></li>
+			<li><a href="index/project">Projects</a></li>
+			<li><a href="index/documentation">Documentation</a></li>
+			<li><a href="index/contact">Contact</a></li>
+		</ul>
+		<h1>Contact</h1>
+
+	</header>
+{% endblock %}
+
+{% block content %}
+	<section id="sector1">
+		<div class="info-header">
+			<h2>Get in touch</h2>
+		</div>
+		<div class="info">
+			<div class="col">
+				<h3>Contact Information</h3><br>
+				<div class="row">
+					<p><i class="fas fa-phone"></i> 984 15 205 45</p><br>
+				</div>
+				<div class="row">
+					<p><i class="fas fa-phone"></i> 984 57 068 54</p><br>
+				</div>
+				<div class="row">
+					<p><i class="fas fa-envelope"></i> info@pysf.com</p><br>
+				</div>
+				<div class="row">
+					<p><i class="fas fa-mail-bulk"></i>
+						 Python Software Foundation Office Ltd<br>
+						GPO Box 13478<br>
+						2nd Floor Anamnagar, Houston,<br>
+						California<br>
+					</p><br>
+				</div>
+			</div>
+			<div class="col">
+				<h3>Tell me what do you want</h3>
+				<form method="post" action="#">
+					<input type="text" name="name" placeholder="Name" />
+					<input type="mail" name="email" placeholder="Email" />
+					<input type="text" name="question" placeholder="Question">
+					<label>Message</label>
+					<textarea></textarea>
+					<input type="submit" valuee="Send">
+				</form>
+			</div>
+		</div>
+	</section>
+	<section id="office-map">
+		<div class="info-header">
+			<h2>Contact Information</h2>
+		</div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.8593423680854!2d-120.39680934812993!3d50.64909510173863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537e2b8f6151425d%3A0x9f11478c3a77d0b8!2sPython+Lake!5e1!3m2!1ses!2ses!4v1546984012759" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</section>
+{% endblock %}
