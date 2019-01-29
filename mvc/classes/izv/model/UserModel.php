@@ -6,6 +6,9 @@ use izv\database\Doctrine;
 use izv\data\User;
 use izv\tools\Tools;
 use izv\tools\Mail;
+use izv\tools\Pagination;
+use Doctrine\ORM\Tools\Pagination\Paginator;
+
 
 /**
  * El modelo siempre accede a la base de datos
@@ -68,6 +71,44 @@ class UserModel extends DoctrineModel {
     function getUsersList() {
         $gestor = $this->getDoctrine()->getEntityManager();
         return $gestor->getRepository('izv\data\User')->findAll(); 
+    }
+    
+    function getUsers($pagina=1, $orden = 'id', $filtro = '') {
+        $total = $this->getNumUsuarios();
+        $gestor = $this->getDoctrine()->getEntityManager();
+        
+        $dql = 'select u from izv\data\User u order by u.'. $orden .', u.correo, u.alias, u.nombre, u.fechaalta';
+        if(isset($filtro) && trim($filtro) !== '') {
+            $dql = 'select u from izv\data\User u
+                    where id like '.$filtro.' or u.alias like '.$filtro.' or u.correo like '.$filtro.' or u.nombre like '.$filtro.' or u.fechaalta like '.$filtro.'
+                    order by u.'. $orden .', u.correo, u.alias, u.nombre, u.fechaalta';
+            echo 'SI';
+            
+        }
+        $paginacion = new Pagination($total, $pagina);
+        $query = $gestor->createQuery($dql);
+        $paginator = new Paginator($query);
+        $limit = 10;
+        $paginator->getQuery()
+            ->setFirstResult($limit * ($pagina - 1))
+            ->setMaxResults($limit);
+        //return $paginator;
+        $r = array();
+        foreach($paginator as $user) {
+            $r[] = $user->get();
+        }
+        return array(
+            'users_list' => $r,
+            'rango' => $paginacion->rango(),
+            'pagination' => $paginacion->values(),
+            'order' => $orden
+        );
+    }
+    
+    function getNumUsuarios() {
+        $gestor = $this->getDoctrine()->getEntityManager();
+        $users = $gestor->getRepository('izv\data\User')->findAll();
+        return count($users);
     }
     
     function getUser($id) {

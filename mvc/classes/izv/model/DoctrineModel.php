@@ -18,29 +18,11 @@ class DoctrineModel extends Model {
         $this->viewData = array();
     }
     
-    function get($name) {
-        $result = null;
-        if(isset($this->viewData[$name])) {
-            $result = $this->viewData[$name];
-        }
-        return $result;
-    }
-    
-    function getViewData() {
-        return $this->viewData;
-    }
-    
-    
     function getDoctrine() {
         return $this->doc;
     }
     
-    function set($name, $value) {
-        $this->viewData[$name] =  $value;
-        return $this;
-    }
-    
     function __destruct() {
-        //$this->d/oc->close();
+    
     }
 }

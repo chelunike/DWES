@@ -269,6 +269,10 @@ class User {
     {
         return $this->picture;
     }
+    
+    public function getRawPicture() {
+        return $picture;
+    }
 
     /**
      * Add project

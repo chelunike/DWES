@@ -39,6 +39,12 @@ class Model {
         return $this;
     }
     
+    function add(array $array) {
+        foreach($array as $indice => $valor) {
+            $this->set($indice, $valor);
+        }
+    }
+    
     function __destruct() {
         $this->db->close();
     }

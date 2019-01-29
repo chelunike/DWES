@@ -28,7 +28,7 @@ class Project {
     private $content;
     
     /**
-     * @Column(type="boolean", length=255, unique=false, nullable=false)
+     * @Column(type="boolean", unique=false, nullable=false)
      */
     private $active = 0;
     
@@ -41,11 +41,6 @@ class Project {
      * @Column(type="blob", nullable=false)
      */
     private $image = 0;
-    
-    /**
-     * @Column(type="binary", nullable=true)
-     */
-    private $picture;
     
 
     /**
@@ -224,5 +219,29 @@ class Project {
     public function getAuthor()
     {
         return $this->author;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Project
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }

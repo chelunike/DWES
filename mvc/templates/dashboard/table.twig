@@ -1,10 +1,17 @@
+<form action="dashboard">
+    <input type="hidden" name="order" value="{{ order }}">
+    <div class="col-md-3">
+        <input type="text"  class="form-control" name="filtro">
+    </div>
+    <input type="submit" value="Search">
+</form>
 <div class="table-responsive">
     <table id="tablaUsuario" class="table table-hover table-custom spacing8">
         <thead>
             <tr> 
-                <th>#</th>
-                <th>Alias</th>
-                <th>Nombre</th>
+                <th><a href="dashboard?order=id">#</a></th>
+                <th><a href="dashboard?order=alias">Alias</a></th>
+                <th><a href="dashboard?order=nombre">Nombre</a></th>
             </tr>
         </thead>
         <tbody>
@@ -21,8 +28,12 @@
                     <td>{{ user.alias }}</td>
                     <td>{{ user.nombre }}</td>
                 </tr>
-            {% endfor %}        
+            {% endfor %}
         </tbody>
     </table>
+    <a class="btn btn-round btn-primary" href="dashboard?page={{ pagination.primero }}&order={{ order }}">Primero</a>
+    {% for page in rango %}
+        <a class="btn btn-round btn-primary" href="dashboard?page={{ page }}&order={{ order }}">{{ page }}</a>
+    {% endfor %}
+    <a class="btn btn-round btn-primary" href="dashboard?page={{ pagination.ultimo }}&order={{ order }}">Ultimo</a>
 </div>
-

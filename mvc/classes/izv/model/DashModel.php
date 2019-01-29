@@ -127,4 +127,20 @@ class DashModel extends UserModel {
         return false;
     }
     
+    function editPicture($id, $picture) {
+        $gestor = $this->getDoctrine()->getEntityManager();
+        try {
+            $user = $gestor->find('izv\data\User', $id);
+            
+            $user->setPicture($picture);
+            
+            $gestor->flush();
+            return true;
+        } catch(Exception $e) {
+            //echo $e->getMessage();
+            return false;
+        }
+    }
+    
+    
 }

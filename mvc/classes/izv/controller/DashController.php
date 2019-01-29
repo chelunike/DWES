@@ -31,10 +31,11 @@ class DashController extends Controller {
     
     private function loadUser() {
         $this->checkLogin();
-        $user = $this->getSession()->getLogin();
+        $id = $this->getSession()->getLogin();
+        $user = $this->getModel()->getUser($id->getId());
         if($user->getPicture() !== null) {
-            $picture = $user->getPicture();
-            $this->getModel()->set('user_img', 'data:image/png;base64,' . $picture);//stream_get_contents
+            $picture =  $user->getPicture();
+            $this->getModel()->set('user_img', 'data:image/png;base64,' . stream_get_contents($picture));//stream_get_contents
         }
         $this->getModel()->set('user', $user);
     }
@@ -42,7 +43,28 @@ class DashController extends Controller {
     // -- Acciones -- 
     function action() {
         $this->loadUser();
-        $this->getModel()->set('users_list', $this->getModel()->getUsersList());
+        
+        $pagina = Reader::read('page');
+        if($pagina === null || !is_numeric($pagina)) {
+            $pagina =1;
+        }
+        
+        $orden = Reader::read('order');
+        $ordenes = array(
+            'id' => 'id',
+            'correo' => 'correo',
+            'alias' => 'alias',
+            'nombre' => 'nombre',
+            'fechaalta' => 'fecha'
+        );
+        if(!isset($ordenes[$orden])) {
+            $orden='id';
+        }
+        $filter = Reader::read('filter');
+        
+        $r = $this->getModel()->getUsers($pagina, $orden, $filter);
+        $this->getModel()->add($r);
+        
         $this->getModel()->set('is_root', $this->getSession()->isRoot());
         $this->getModel()->set('template_file', 'index.twig');
         $this->getModel()->set('title', 'Dashboard');
@@ -92,9 +114,7 @@ class DashController extends Controller {
             	$bin_string = file_get_contents($_FILES["fichero"]["tmp_name"]);
             	$picture = base64_encode($bin_string);
                 
-                $user->setPicture($picture);
-                
-                if($this->getModel()->update()) {
+                if($this->getModel()->editPicture($id, $picture)) {
                     $r = 1;
                 }
             } else 
@@ -237,5 +257,11 @@ class DashController extends Controller {
         header('Location: '.App::BASE.'dashboard?a=delete&r='.$r);
         exit();
     }
+    
+    
+    function ciudades() {
+        $this->getModel()->set('template_file', '_ciudades.html');
         
+        
+    }
 }

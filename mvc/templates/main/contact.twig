@@ -10,9 +10,7 @@
 				<li><a href="index/contact">Contact</a></li>
 				{% if is_logged %}
 				    <li><a href="user/profile">Profile</a></li>
-				    {% if is_admin %}
-				        <li><a href="dashboard">Admin Area</a></li>
-				    {% endif %}
+				    <li><a href="dashboard">Dashboard</a></li>
 				    <li><a href="user/logout">Logout</a></li>
 				{% else %}
 				    <li><a href="user/login">Login</a></li>
@@ -26,6 +24,14 @@
 			<li><a href="index/project">Projects</a></li>
 			<li><a href="index/documentation">Documentation</a></li>
 			<li><a href="index/contact">Contact</a></li>
+			{% if is_logged %}
+		    <li><a href="user/profile">Profile</a></li>
+		        <li><a href="dashboard">Dashboard</a></li>
+			    <li><a href="user/logout">Logout</a></li>
+			{% else %}
+			    <li><a href="user/login">Login</a></li>
+			    <li><a href="user/register">Sing Up</a></li>
+			{% endif %}
 		</ul>
 		<h1>Contact</h1>
 

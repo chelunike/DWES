@@ -28,7 +28,7 @@ class Project {
     private $content;
     
     /**
-     * @Column(type="boolean", length=255, unique=false, nullable=false)
+     * @Column(type="boolean", unique=false, nullable=false)
      */
     private $active = 0;
     
@@ -41,11 +41,6 @@ class Project {
      * @Column(type="blob", nullable=false)
      */
     private $image = 0;
-    
-    /**
-     * @Column(type="binary", nullable=true)
-     */
-    private $picture;
     
 
     /**
@@ -152,54 +147,6 @@ class Project {
     public function getDate()
     {
         return $this->date;
-    }
-
-    /**
-     * Set src
-     *
-     * @param string $src
-     *
-     * @return Project
-     */
-    public function setSrc($src)
-    {
-        $this->src = $src;
-
-        return $this;
-    }
-
-    /**
-     * Get src
-     *
-     * @return string
-     */
-    public function getSrc()
-    {
-        return $this->src;
-    }
-
-    /**
-     * Set picture
-     *
-     * @param binary $picture
-     *
-     * @return Project
-     */
-    public function setPicture($picture)
-    {
-        $this->picture = $picture;
-
-        return $this;
-    }
-
-    /**
-     * Get picture
-     *
-     * @return binary
-     */
-    public function getPicture()
-    {
-        return $this->picture;
     }
 
     /**

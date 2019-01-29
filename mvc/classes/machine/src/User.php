@@ -244,30 +244,6 @@ class User {
     }
 
     /**
-     * Set src
-     *
-     * @param string $src
-     *
-     * @return User
-     */
-    public function setSrc($src)
-    {
-        $this->src = $src;
-
-        return $this;
-    }
-
-    /**
-     * Get src
-     *
-     * @return string
-     */
-    public function getSrc()
-    {
-        return $this->src;
-    }
-
-    /**
      * Set picture
      *
      * @param binary $picture
