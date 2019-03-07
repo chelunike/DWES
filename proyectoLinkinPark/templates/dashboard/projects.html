@@ -1,0 +1,86 @@
+{% extends '_base.twig' %}
+
+{% block head %}
+	<link rel="stylesheet" href="assets/css/paginate.css">
+	
+	<script src="assets/js/checks.js" defer></script>
+	<script src="assets/js/project.js" defer></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="row clearfix">
+	<div class="col-12">
+		<form action="dashboard">
+			<input type="hidden" name="order" value="{{ order }}">
+			<input type="text" name="filtro">
+			<input type="submit" value="Search">
+		</form>
+		<div class="table-responsive">
+			<table id="tablaUsuario" class="table table-hover table-custom spacing8">
+				<thead>
+					<tr> 
+						<th><a href="dashboard?order=id">#</a><input type="checkbox" id="checkForAll"/></th>
+						<th><a href="dashboard?order=title">Title</a></th>
+						<th><a href="dashboard?order=date">Date</a></th>
+						<th><a href="dashboard?order=content">Content</a></th>
+						<th><a href="dashboard?order=active">Activo</a></th>
+						<th>Editar</th>
+						<th>Borrar</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for project in projects_list %}
+						<tr>
+							<td class="w60">
+								<input type="checkbox" name="ids[]" value="{{ project.id }}" form="fBorrar"/>
+								<img src="
+								{% if (project.image) %}
+									data:image/png;base64,{{ project.image|raw }}
+								{% else %}
+									assets/images/project.png
+								{% endif %}" data-toggle="tooltip" data-placement="top" title="Project image" alt="Project" class="w35 rounded">
+							</td>
+							<td>{{ project.title }}</td>
+							<td>{{ project.date|date }}</td>
+							<td>{{ project.content }}</td>
+							<td>
+								{% if (project.active) %}
+									<i class="fas fa-check-circle"></i>
+								{% else %}
+									<i class="fas fa-times-circle"></i>
+								{% endif %}
+							</td>
+							<td scope="row"><a class="btn btn-round btn-success" href="dashboard/edit?id={{ project.id }}" class="editar">Editar</a></td>
+							<td scope="row"><a class="btn btn-round btn-danger" href="dashboard/dodelete?id={{ project.id }}" class="borrar">Borrar</a></td>
+						</tr>
+					{% endfor %}        
+				</tbody>
+			</table>
+			<div>
+				<a class="btn btn-outline-light" href="dashboard?page={{ pagination.primero }}&order={{ order }}" class="editar"><i class="fas fa-backward"></i></a>
+				<div class="paginate">
+					<button class="paginate left"><i></i><i></i></button>
+					<div class="counter"></div>
+					<button class="paginate right"><i></i><i></i></button>
+				</div>
+				<a class="btn btn-outline-light" href="dashboard?page={{ pagination.ultimo }}&order={{ order }}" class="editar"><i class="fas fa-forward"></i></a>	
+			</div>
+			
+			<br>
+			{% for page in rango %}
+				<a class="btn btn-round btn-primary" href="dashboard?page={{ page }}&order={{ order }}" class="editar">{{ page }}</a>
+			{% endfor %}
+		</div>
+		<br>
+		<div class="row">
+			<form action="dashboard/dodelete" method="post" name="fBorrar" id="fBorrar" >
+				<input class="btn btn-danger" type="button" value="Borrar" data-toggle="modal" data-target="#confirm" />
+			</form> 
+			<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modalInsert">Insertar Nuevo</button>
+		</div>
+		
+
+	</div>
+</div>
+{% endblock %}

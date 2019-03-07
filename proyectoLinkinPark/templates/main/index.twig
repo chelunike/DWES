@@ -1,0 +1,118 @@
+{% extends 'base.twig' %}
+
+{% block head %}
+	<script src="{{ template_folder }}assets/js/particles.js" defer></script>
+{% endblock %}
+
+{% block header %}
+<header id="top">
+	<canvas id="canvas" width="100%" height="100%"></canvas>
+	
+	{% include '_nav.twig' %}
+	
+	<h1>Python</h1>
+	<div class="logo">
+		<img src="{{ template_folder }}assets/img/logo.png" alt="Python Logo" title="Python" />
+	</div>
+	<div class="scroll">
+		<p class="cite">Start building the thing</p>
+		<a href="#sector1"><img class="ascroll" src="{{ template_folder }}assets/img/down1.gif" alt="Down" title="ScrollDown"></a>
+	</div>
+</header>
+
+{% endblock %}
+{% block content %}
+
+	<section id="sector1">
+		<div class="info-box">
+			<h2>What is python ?</h2>
+			<p>
+				Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse. The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed. 
+			</p>	
+		</div>
+		<div class="image">
+			<img src="{{ template_folder }}assets/img/piton.jpg">	
+		</div>
+	</section>
+	<section id="sector2">
+		<div class="image">
+			<img src="{{ template_folder }}assets/img/neuralNetwork.png">
+		</div>
+		<div class="info-box">
+			<h2>The python habilities</h2>
+			<h3><i class="fab fa-python"></i> Web and Internet Development</h3>
+			<p>
+				Pythofn offers many choices for web development
+				Python's standard library supports many Internet protocols
+			</p>
+			<h3><i class="fab fa-python"></i> Scientific, Numeric & Artifical Inteligence</h3>
+			<p>Python is widely used in scientific and numeric computing:</p>
+			<h3><i class="fab fa-python"></i> Education</h3>
+			<p>Python is a superb language for teaching programming, both at the introductory level and in more advanced courses.</p>
+			<h3><i class="fab fa-python"></i> Desktop GUIs</h3>
+			<p>
+				The Tk GUI library is included with most binary distributions of Python.
+				Some toolkits that are usable on several platforms are available separately.
+			</p>
+			<h3> <i class="fab fa-python"></i> Software Development</h3>
+			<p>Python is often used as a support language for software developers, for build control and management, testing, and in many other ways.</p>
+			<h3><i class="fab fa-python"></i> Business Applications</h3>
+			<p>Python is also used to build ERP and e-commerce systems</p>
+		</div>
+	</section>
+	<section id="sector3">
+		<div class="info-box">
+			<h2>Start with python. That's all you need</h2>
+			<p>You don't need a powerful computer, python doesn't need nothing special.</p>
+			<div>
+				<h3><i class="fas fa-terminal"></i> Try this code know in our REPL</h3>
+				<code>
+					<div style="background: #333; border: 1px solid grey; border-radius: 2px; padding:.2em .6em; color:white;"><pre style="margin: 0; line-height: 125%"><span style="color: #4b8bbe; font-weight: bold">print</span>(<span style="color: #ffd43b">&#39;Hello World!&#39;</span>)
+					</pre></div>
+				</code>
+			</div>
+		</div>
+		<div class="image">
+			<img src="{{ template_folder }}assets/img/pc.jpg">
+		</div>
+		<code class="python-repl">
+			<iframe src="https://console.python.org/python-dot-org-console/"></iframe>
+		</code>
+		<div class="info-box bar">
+			<h2>Get Python</h2>
+			<p>
+				Get python interpreter & start coding.
+				Avaible for all platforms
+			</p>
+			<div>
+				<button><a href=""><i class="fab fa-windows"></i> Download</a></button>
+				<button><a href=""><i class="fab fa-apple"></i> Download</a></button>
+				<button><a href=""><i class="fab fa-linux"></i> Download</a></button>
+			</div>
+			<h2>Look & Feel the code</h2>
+			<p>
+				You can improve the beauty of code with an ide
+			</p>
+			<div class="ide">
+				<button><a href=""><img src="{{ template_folder }}assets/img/sublime-text-icon.png"><i></i> Sublime Text</a></button>
+				<button><a href=""><img src="{{ template_folder }}assets/img/pycharm-icon.png"><i></i> Pycharm</a></button>
+				<button><a href=""><img src="{{ template_folder }}assets/img/visual-studio-icon.png"><i></i> Visual Studio</a></button>
+			</div>
+		</div>
+	</section>
+	<section id="sector4">
+		<div class=" info-box left-box">
+			<h2>Meet the father</h2>
+			<cite><i class="fas fa-quote-left"></i>
+				The joy of coding Python should be in seeing short, concise, readable classes that express a lot of action in a small amount of clear code -- not in reams of trivial code that bores the reader to death.
+			<i class="fas fa-quote-right"></i><br>
+			Guido Van Rossum</cite>
+			<p>
+				Guido van Rossum (born 31 January 1956) is a Dutch programmer best know as the author of the Python programming language, for which he was the "Benevolent dictator for life" (BDFL) until he stepped down from the position in July 2018.
+			</p>
+		</div>
+		<div class="info-box right-box">
+			<img class="guido-photo" src="{{ template_folder }}assets/img/guido.jpg" alt="Guido Van Rossum" title="Guido Van Rossum Fathe of python">
+		</div>
+	</section>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'base.twig' %}
+
+{% block header %}
+	<header id="top">
+		
+		{% include '_nav.twig' %}
+		
+		<h1>Projects</h1>
+
+	</header>
+{% endblock %}
+
+{% block content %}
+	<section>
+		<div class="info-header">
+			<h2>Python & Raspberry <PICTURE></PICTURE> Projects</h2>
+			<p>
+				There are no secrets to success. It is the result of preparation, hard work, and learning from failure.
+			</p>
+		</div>
+	</section>
+	<section>
+		<!-- Projects -->
+		<div class="project-container">
+
+			{% for project in projects %}
+				<!-- Project -->
+				<div class="project">
+					<div class="thumbnail"><img src="data:image/png;base64,{{ project.image | imageFormat }}"></div>
+					<div class="info-project">
+						<h3>{{ project.title }}</h3>
+						<h5>By <a href="index/author/{{ project.author }}">{{ project.author }}</a></h5>
+						<p>
+							{{ project.excerpt }}
+						</p>
+						<button><a href="#">Learn more</a></button>
+						<div class="content hidden">
+							{{ project.content }}
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+			
+			<div class="project">
+				<div class="thumbnail">
+					<img src="" alt="Project Photo">
+				</div>
+				<div class="info-project">
+					<h3>Title</h3>
+					<h5>By: <a href="">neomode</a></h5>
+					<p>
+						Excerpt
+					</p>
+					<a href="">Learn more</a>
+					<div class="content hidden">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

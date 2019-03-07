@@ -1,0 +1,141 @@
+{% extends '_base.twig' %}
+
+{% block head %}
+    <script src="assets/js/checks.js" defer></script>
+{% endblock %}
+
+{% block content %}
+<div class="row clearfix">
+    
+    <!-- Numbers data -->
+    {% for data in numbers %}
+    <!-- Data -->
+    <div class="col-lg-3 col-md-6">
+		<div class="card">
+			<div class="body">
+				<div class="d-flex align-items-center">
+					<div class="icon-in-bg bg-indigo text-white rounded-circle"><i class="fa fa-{{ data.icon }}"></i></div>
+					<div class="ml-4">
+						<span>{{ data.name }}</span>
+						<h4 class="mb-0 font-weight-medium">{{ data.value }}</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
+
+
+<div class="row clearfix">
+    
+	<div class="col-lg-4 col-md-12">
+		<div class="card">
+			<div class="header">
+				<h2>Users</h2>
+			</div>
+			<div class="body">
+				<div class="row text-center">
+					<div class="col-6 border-right pb-4 pt-4">
+						<label class="mb-0">New Users</label>
+						<h4 class="font-30 font-weight-bold text-col-blue">2,025</h4>
+					</div>
+					<div class="col-6 pb-4 pt-4">
+						<label class="mb-0">Return Visitors</label>
+						<h4 class="font-30 font-weight-bold text-col-blue">1,254</h4>
+					</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="form-group">
+					<label class="d-block">New Users <span class="float-right">77%</span></label>
+					<div class="progress progress-xxs">
+						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%;"></div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="d-block">Return Visitors <span class="float-right">50%</span></label>
+					<div class="progress progress-xxs">
+						<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="d-block">Engagement <span class="float-right">23%</span></label>
+					<div class="progress progress-xxs">
+						<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100" style="width: 23%;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-4 col-md-12">
+		<a class="card" href="javascript:void(0)">
+			<div class="header">
+				<h2>Just Me</h2>
+			</div>
+			<div class="body text-center">
+				<img src="
+                {% if (user_img) %}
+                    {{ user_img|raw }}
+                {% else %}
+                    assets/images/user.png
+                {% endif %}" class="img-thumbnail rounded-circle" width="200px" height="200px" alt="User Profile Picture">
+				<h6 class="mt-3">{{ user.name }} {{ user.lastname }}</h6>
+				<div class="text-center text-muted">SomeOne Developer</div>
+			</div>
+			<div class="card-footer text-center">
+				<div class="row clearfix">
+					<div class="col-6">
+						<i class="fa fa-tag font-22"></i>
+						<div><span class="text-muted">9 Badges</span></div>
+					</div>
+					<div class="col-6">
+						<i class="fa fa-dollar font-22"></i>
+						<div><span class="text-muted">$ 3.100</span></div>
+					</div>
+				</div>
+			</div>
+		</a>
+		
+		<div class="card">
+			<div class="body">
+				<div class="card-text">
+					<div class="mt-0">
+						<small class="float-right text-muted">10/200 MB</small>
+						<span>Memory</span>
+						<div class="progress progress-xxs">
+							<div style="width: 60%;" class="progress-bar"></div>
+						</div>
+					</div>
+					<div class="mt-4">
+						<small class="float-right text-muted">40 KB</small>
+						<span>Bandwidth</span>
+						<div class="progress progress-xxs">
+							<div style="width: 50%;" class="progress-bar"></div>
+						</div>
+					</div>
+					<div class="mt-4">
+						<small class="float-right text-muted">73%</small>
+						<span>Activity</span>
+						<div class="progress progress-xxs">
+							<div style="width: 40%;" class="progress-bar"></div>
+						</div>
+					</div>
+					<div class="mt-4">
+						<small class="float-right text-muted">400 MB</small>
+						<span>FTP</span>
+						<div class="progress progress-xxs mb-0">
+							<div style="width: 80%;" class="progress-bar bg-danger"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+
+{% endblock %}

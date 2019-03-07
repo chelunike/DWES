@@ -1,0 +1,78 @@
+ function pagination($class, $pagina=1, $orden = 'id', $filtro = '', $limit = 10, $wheres = [] ) {
+        $gestor = $this->getDoctrine()->getEntityManager();
+        
+        $names = $gestor->getClassMetadata($class)->getColumnNames();
+        $query = $gestor->createQueryBuilder();
+        
+        // Set select class & from
+        $query->select('c');
+        $query->from($class, 'c');
+        
+        // If you want 
+        foreach($wheres as $name => $wheres) {
+            //if(!isset($filtro) || trim($filtro) == '') {
+                $query->where('c.' . $name . ' = '. $wheres);
+            //} else
+            //    $query->andWhere('c.' . $name . ' = '. $wheres);
+        }
+        
+        // Add search 
+        if(isset($filtro) && trim($filtro) !== '') {
+            foreach($names as $n => $name) {
+                if($n == 0 && count($wheres) >0 ) {
+                    $query->where( 'c.' . $name.' LIKE :filtro');
+                } else
+                    $query->orWhere( 'c.' . $name .' LIKE :filtro');
+            }
+            $query->setParameter('filtro', $filtro);
+        }
+        
+        // Add orders
+        $query->orderBy('c.'.$orden, 'DESC');
+        
+        
+        /* -- The proccess of creative --
+        $dql = 'select p from izv\data\Project p where p.author_id = :user order by p.'. $orden .', p.date, p.title, p.content';
+        ->from('Project\Entities\Item', 'i')
+            ->select("i, e")
+            ->join("i.entity", 'e')
+            ->where("i.lang = :lang AND e.album = :album")
+            ->setParameter('lang', $lang)
+            ->setParameter('album', $album);
+        
+        $expr = $em->getExpressionBuilder();
+        
+        if(isset($filtro) && trim($filtro) !== '') {
+            $dql = 'select p from izv\data\Project p 
+                    where p.active = 1 and id like :filtro or u.title like :filtro or u.excerpt like '.$filtro.' or u.date like '.$filtro .'
+                    order by p.'. $orden .', p.date, p.title, p.excerpt';
+            $query = $gestor->createQuery($dql);
+            $query->setParameter('filtro', $filtro);
+        }
+        //$exp =  $qb->expr()->in('r.winner', array('?1'))
+        
+        //$query->add('where', $exp);
+        ->where('e.source_id = :id')
+        ->andWhere('source_name=?', 'test')
+        ->andWhere('source_val=?', '30')
+       
+        //$query->orderBy('column1 ASC, column2 DESC');
+
+        //$query->addOrderBy('column1', 'ASC')
+        //   ->addOrderBy('column2', 'DESC');
+        */
+        $total = count($query->getQuery()->getArrayResult());
+        
+        $paginator = new Paginator($query);
+        $paginator->getQuery()
+            ->setFirstResult($limit * ($pagina - 1))
+            ->setMaxResults($limit);
+        $paginacion = new Pagination($total, $pagina, $limit);
+        
+        return array(
+            'paginator' => $paginator,
+            'rango' => $paginacion->rango(),
+            'pagination' => $paginacion->values(),
+            'order' => $orden
+        );
+    }

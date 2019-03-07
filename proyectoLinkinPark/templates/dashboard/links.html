@@ -1,0 +1,210 @@
+{% extends '_base.twig' %}
+
+{% block head %}
+	<link rel="stylesheet" href="assets/css/paginate.css">
+	
+	<!---<script src="assets/js/checks.js" defer></script>-->
+	<script src="assets/js/ajaxis.js" defer></script>
+	
+	<script type="text/javascript" src="assets/js/links.js" defer></script>
+	
+{% endblock %}
+
+{% block content %}
+<div class="row clearfix">
+	
+	<!-- Formulario -->
+	<div class="col-lg-8 col-md-7">
+		<div class="card">
+			<div class="header">
+				<h2>Links List</h2>
+			</div>
+			<div class="body">                                    
+				<hr>
+				<div class="row">
+					<form method="post" action="dashboard/links" data-ajax="ajax/action/type/link" id="form-search" class="search-form">
+						<div class="form-group">
+							<input name="s" value="" class="form-control" placeholder="Search here..." type="text">
+							<button type="submit" class="btn btn-default"><i class="icon-magnifier"></i></button>	
+						</div>
+					</form>
+				</div>
+				
+				<div class="table-responsive">
+					<table id="tablaLinks" class="table table-hover table-custom spacing8" data-update="ajax/doupdate/type/link">
+						<thead>
+							<tr> 
+								<th data-order="id"><a href="#">#</a><input type="checkbox" id="checkForAll"/></th>
+								<th data-order="href"><a href="#">Link</a></th>
+								<th data-order="comment"><a href="#">Comment</a></th>
+								<th data-order="category"><a href="#">Category</a></th>
+								<th data-order="visible"><a href="#">Visible</a></th>
+								<th>Borrar</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for link in links_list %}
+								<tr data-id="{{ link.id }}">
+									<td class="w60">
+										<input type="checkbox" name="ids[]" value="{{ link.id }}" form="fBorrar"/>
+									</td>
+									<td data-type="url" data-name="href">{{ link.href }}</td>
+									<td data-type="text" data-name="comment">{{ link.comment }}</td>
+									<td data-type="select" data-name="category">{{ link.category.name }}</td>
+									<td data-type="checkbox" data-name="visible">
+										{% if (link.visible) %}
+											<i class="fas fa-check-circle"></i>
+										{% else %}
+											<i class="fas fa-times-circle"></i>
+										{% endif %}
+									</td>
+									<td scope="row"><a class="btn btn-round btn-danger btDeleteL" href="" data-ajax="ajax/dodelete/type/link" data-id="{{ link.id }}">Borrar</a></td>
+								</tr>
+							{% endfor %}        
+						</tbody>
+					</table>
+				</div>
+				
+				<a id="updateLinks" class="btn btn-outline-success"><i class="fas fa-sync"></i></a>
+				<div class="pt-3">
+					<a class="btn btn-outline-light paginate-first" href="dashboard?page={{ pagination.primero }}"  data-page="{{ pagination.primero }}"  ><i class="fas fa-backward"></i></a>
+					<div id="pag-link" class="paginate" data-total="{{ pagination.ultimo+1 }}">
+						<button class="paginate left"><i></i><i></i></button>
+						<div class="counter"></div>
+						<button class="paginate right"><i></i><i></i></button>
+					</div>
+					<a class="btn btn-outline-light paginate-last" href="dashboard?page={{ pagination.ultimo }}" data-page="{{ pagination.ultimo }}" ><i class="fas fa-forward"></i></a>
+				</div>
+					
+				<div class="row">
+					<form action="dashboard/dodelete" method="post" id="fBorrar" >
+						<input class="btn btn-danger" type="button" value="Borrar" data-toggle="modal" data-target="#confirm" />
+					</form>
+					<a href="#" class="btn btn-success"  data-toggle="modal" data-target="#addLink">Agregar Link</a>
+				</div>
+		
+			</div>
+		</div>
+	</div>
+	
+	<!-- Formulario Categorias -->
+	<div class="col-lg-4">
+		<div class="card">
+			<div class="header">
+				<h2>Categories</h2>
+			</div>
+			<div class="body">                                    
+				<hr>
+				<div class="table-responsive">
+					<table id="tablaCategories" class="table table-hover table-custom spacing8" data-update="ajax/doupdate/type/category">
+						<thead>
+							<tr>
+								<th><a href="dashboard?order=name">Name</a></th>
+								<th>Delete</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for category in categories_list %}
+								<tr data-id="{{ category.id }}">
+									<td data-type="text" data-name="name">{{ category.name }}</td>
+									<td scope="row"><a class="btn btn-round btn-danger btDeleteC" href="" data-ajax="ajax/dodelete/type/category" data-id="{{ category.id }}" >Borrar</a></td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+				<a id="updateCategories" class="btn btn-outline-success"><i class="fas fa-sync"></i></a>
+				<div >
+					<ul class="pagination justify-content-center">
+						<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a></li>
+						<li class="page-item"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">Next</a></li>
+					</ul>
+					<!--<form action="dashboard/dodelete" method="post" id="fBorrarC" >
+						<input class="btn btn-danger" type="button" value="Borrar" data-toggle="modal" data-target="#confirm" />
+					</form>-->
+					<form id="formInsertCategory" class="row center" method="post" action="dashboard/insert/type/category" data-ajax="ajax/insert/type/category">
+						<input type="text" name="name" placeholder="Category Name" class="form-control col-md-10"/>
+						<button type="submit" href="#" class="btn btn-success col-md-2"  ><i class="fas fa-plus-square"></i></button><!-- data-toggle="modal" data-target="#addCategory" -->
+					</form>
+				</div>
+		
+			</div>
+		</div>
+	</div>
+	
+	
+	
+</div>
+
+<!-- Modal de confirmacion -->
+<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<h5 class="modal-title" id="exampleModalLabel">Borrar todos los seleccionados</h5>
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>
+	  <div class="modal-body">
+		¿ Estas seguro de lo que quieres hacer ?
+	  </div>
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		<button type="submit" form="fBorrar" class="btn btn-danger">Borrar</button>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<!-- Modal de Insercion -->
+<div class="modal fade" id="addLink" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title">Insertar Link</h5>
+			<!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+		</div>
+		<div class="modal-body">
+			<form action="dashboard/doinsert" method="post" data-ajax="ajax/insert/type/link" id="formInsertLink" >
+				<div class="form-group">
+					<label>Link dirrection</label>                                                  
+					<input type="url" name="href" class="form-control" placeholder="Url">
+				</div>
+				<div class="form-group">                                         
+					<input type="text" name="comment" class="form-control" placeholder="Emotive title" required>
+				</div>
+				
+				<div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                    </div>
+                    <select name="category" class="custom-select" id="inputGroupSelect01">
+                    	<option selected>Choose...</option>
+                    	{% for category in categories_list %}
+							<option value="{{ category.id }}">{{ category.name }}</option>
+						{% endfor %}
+                    </select>
+                </div>
+				
+				<ul class="list-group mb-3 tp-setting">
+					<li class="list-group-item">
+						Activo
+						<div class="float-right">
+							<label class="switch">
+								<input type="checkbox" name="visible" value="1">
+								<span class="slider round"></span>
+							</label>
+						</div>
+					</li>
+				</ul>
+				<input type="submit" class="btn btn-round btn-success"  value="Insert"> &nbsp;&nbsp;
+				<input type="reset" class="btn btn-round btn-danger" data-dismiss="modal" value="Cancel">
+			</form>
+		</div>
+	</div>
+  </div>
+</div>
+
+{% endblock %}

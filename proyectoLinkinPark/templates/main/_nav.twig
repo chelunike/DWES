@@ -1,0 +1,29 @@
+<nav>
+    <ul class="list-nav">
+		<li><a href="index">Home</a></li>
+		<li><a href="index/links">Links</a></li>
+		<li><a href="index/projects">Projects</a></li>
+		{% if is_logged %}
+		    <li><a href="user/profile">Profile</a></li>
+		        <li><a href="dashboard">Dashboard</a></li>
+		    <li><a href="user/logout">Logout</a></li>
+		{% else %}
+		    <li><a href="user/login">Login</a></li>
+		    <li><a href="user/register">Sing Up</a></li>
+		{% endif %}
+	</ul>
+	<img src="{{ template_folder }}assets/img/menu.svg" id="menuIco" alt="Menu" />
+</nav>
+<ul id="menu" class="hidden">
+	<li><a href="index">Home</a></li>
+	<li><a href="index/links">Links</a></li>
+	<li><a href="index/projects">Projects</a></li>
+	{% if is_logged %}
+	    <li><a href="user/profile">Profile</a></li>
+	        <li><a href="dashboard">Dashboard</a></li>
+	    <li><a href="user/logout">Logout</a></li>
+	{% else %}
+	    <li><a href="user/login">Login</a></li>
+	    <li><a href="user/register">Sing Up</a></li>
+	{% endif %}
+</ul>

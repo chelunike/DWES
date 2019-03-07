@@ -1,0 +1,243 @@
+{% extends '_base.twig' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row clearfix">
+        <!-- Info Preview -->
+        <div class="col-xl-3 col-lg-4 col-md-5">
+            <div class="card">
+                <div class="header">
+                    <h2>Info</h2>
+                </div>
+                <div class="body">
+                    <small class="text-muted">Address: </small>
+                    <p>795 Folsom Ave, Suite 600 San Francisco, 94107</p>
+                    <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1923731.7533500232!2d-120.39098936853455!3d37.63767091877441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1522391841133" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <hr>
+                    <small class="text-muted">Email address: </small>
+                    <p>{{ user.correo }}</p>                            
+                    <hr>
+                    <small class="text-muted">Mobile: </small>
+                    <p>+ 202-222-2121</p>
+                    <hr>
+                    <small class="text-muted">Birth Date: </small>
+                    <p class="m-b-0">Marzo 3th, 25</p>
+                    <hr>
+                    <small class="text-muted">Social: </small>
+                    <p><i class="fa fa-twitter m-r-5"></i> twitter.com/patata</p>
+                    <p><i class="fa fa-facebook  m-r-5"></i> facebook.com/patata</p>
+                    <p><i class="fa fa-github m-r-5"></i> github.com/patata</p>
+                    <p><i class="fa fa-instagram m-r-5"></i> instagram.com/patata</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Update basic information -->
+        <div class="col-xl-9 col-lg-8 col-md-7">
+            <div class="card">
+                <div class="header">
+                    <h2>Change Information</h2>
+                </div>
+                <div class="body">                                    
+                    <form action="dashboard/doeditself" method="post">
+                        <input type="hidden" name="id" value="{{ user.id }}"/>
+                        <div class="row clearfix">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">                                                
+                                    <input type="text" name="alias" class="form-control" value="{{ user.alias }}" placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">                                                
+                                    <input type="text" name="nombre" class="form-control" placeholder="First Name" value="{{ user.nombre }}">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">                                                
+                                    <input type="text" class="form-control" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">-- Select Gander --</option>
+                                        <option value="AF">Male</option>
+                                        <option value="AX">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="icon-calendar"></i></span>
+                                        </div>
+                                        <input data-provide="datepicker" data-date-autoclose="true" class="form-control" placeholder="Birthdate">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="icon-globe"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="http://">
+                                    </div>
+                                </div>
+                            </div>                                
+                            <div class="col-lg-4 col-md-12">
+                                <div class="form-group">
+                                    {% include 'country.twig'%}
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="State/Province">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">                                                
+                                    <textarea rows="4" type="text" class="form-control" placeholder="Address"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <ul class="list-group mb-3 tp-setting">
+                                    <li class="list-group-item">
+                                        Checkbox
+                                        <div class="float-right">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-round btn-primary"  value="Update"> &nbsp;&nbsp;
+                        <input type="reset" class="btn btn-round btn-default" value="Cancel">
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Update Profile image --> 
+            <div class="card">
+                <div class="header">
+                    <h2>Change account image</h2>
+                </div>
+                <div class="body">
+                    <form action="dashboard/editpicture" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="{{ user.id }}"/>
+                        <div class="row clearfix">
+                            <div class="col-lg-4 col-md-12">                                            
+                                <div class="form-group">                                                
+                                    <input type="file" name="fichero" class="form-control"  placeholder="Insert image">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-round btn-primary"  value="Update"> &nbsp;&nbsp;
+                        <input type="reset" class="btn btn-round btn-default" value="Cancel">
+                    </form>
+                </div>
+            </div>
+            
+            
+            <div class="card">
+                <div class="header">
+                    <h2>Change Account</h2>
+                </div>
+                <div class="body">
+                    <form action="dashboard/editmail" method="post">
+                        <input type="hidden" name="id" value="{{ user.id }}"/>
+                        <div class="row clearfix">
+                            <div class="col-lg-4 col-md-12">
+                                <div class="form-group">
+                                    <input type="email" name="correo" class="form-control" value="{{ user.correo }}" placeholder="Email">
+                                </div>
+                            </div>
+                            <!--<div class="col-lg-4 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Phone Number">
+                                </div>
+                            </div>-->
+                        </div>
+                        <input type="submit" class="btn btn-round btn-primary"  value="Update"> &nbsp;&nbsp;
+                        <input type="reset" class="btn btn-round btn-default" value="Cancel">
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Change password -->
+            <div class="card">
+                <div class="header">
+                    <h2>Change passsword</h2>
+                </div>
+                <div class="body">
+                    <form action="dashboard/editpasswd" method="post">
+                        <input type="hidden" name="id" value="{{ user.id }}"/>
+                        <div class="col-lg-12 col-md-12">
+                            <hr>
+                            <h6>Change Password</h6>
+                            <div class="form-group">
+                                <input type="password" name="clave" class="form-control" placeholder="Current Password">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="claveNew" class="form-control" placeholder="New Password">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="claveNew2" class="form-control" placeholder="Confirm New Password">
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-round btn-warning"  value="Update"> &nbsp;&nbsp;
+                        <input type="reset" class="btn btn-round btn-default" value="Cancel">
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Die -->
+            <div class="card">
+                <div class="header">
+                    <h2>Exit & Destruct yourself</h2>
+                </div>
+                <div class="body">
+                    <form action="dashboard/dodestruct" method="post">
+                        <input type="hidden" name="id" value="{{ user.id }}"/>
+                        <div class="col-lg-12 col-md-12">
+                            <h6>Hire up yourself</h6>
+                            <hr>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                    <input type="radio" name="destruct" value="1" checked>
+                                    </div>
+                                </div>
+                                <label for=""> Partial destruct you cant logging, unless you activate yourself. (Be like a ghost)</label>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                    <input type="radio" name="destruct" value="0">
+                                    </div>
+                                </div>
+                                <label for=""> Total destruct you was never here. (Be like nothing :)</label>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-round btn-danger"  value="DIE"> &nbsp;&nbsp;
+                        <input type="reset" class="btn btn-round btn-default" value="Cancel">
+                    </form>
+                </div>
+            </div>
+            
+        </div><!-- End Form section -->
+        
+    </div>
+</div>
+{% endblock %}

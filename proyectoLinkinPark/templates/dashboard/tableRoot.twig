@@ -1,0 +1,67 @@
+<form action="dashboard">
+    <input type="hidden" name="order" value="{{ order }}">
+    <input type="text" name="filtro">
+    <input type="submit" value="Search">
+</form>
+<div class="table-responsive">
+    <table id="tablaUsuario" class="table table-hover table-custom spacing8">
+        <thead>
+            <tr> 
+                <th><a href="dashboard?order=id">#</a><input type="checkbox" id="checkForAll"/></th>
+                <th><a href="dashboard?order=alias">Alias</a></th>
+                <th><a href="dashboard?order=correo">Correo</a></th>
+                <th><a href="dashboard?order=nombre">Nombre</a></th>
+                <th><a href="dashboard?order=fecha">Activo</a></th>
+                <th>Admin</th>
+                <th>Editar</th>
+                <th>Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users_list %}
+                <tr>
+                    <td class="w60">
+                        <input type="checkbox" name="ids[]" value="{{ user.id }}" form="fBorrar"/>
+                        <img src="
+                        {% if (user.picture) %}
+                            data:image/png;base64,{{ user.getRawPicture()|raw }}
+                        {% else %}
+                            assets/images/user.png
+                        {% endif %}" data-toggle="tooltip" data-placement="top" title="Avatar Name" alt="Avatar" class="w35 rounded">
+                    </td>
+                    <td>{{ user.alias }}</td>
+                    <td>{{ user.correo }}</td>
+                    <td>{{ user.nombre }}</td>
+                    <td>
+                        {% if (user.activo) %}
+                            <i class="fas fa-check-circle"></i>
+                        {% else %}
+                            <i class="fas fa-times-circle"></i>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if (user.administrador) %}
+                            <i class="fas fa-check-circle"></i>
+                        {% else %}
+                            <i class="fas fa-times-circle"></i>
+                        {% endif %}
+                    </td>
+                    <td scope="row"><a class="btn btn-round btn-success" href="dashboard/edit?id={{ user.id }}" class="editar">Editar</a></td>
+                    <td scope="row"><a class="btn btn-round btn-danger" href="dashboard/dodelete?id={{ user.id }}" class="borrar">Borrar</a></td>
+                </tr>
+            {% endfor %}        
+        </tbody>
+    </table>
+    <a class="btn btn-round btn-primary" href="dashboard?page={{ pagination.primero }}&order={{ order }}" class="editar">Primero</a>
+    {% for page in rango %}
+        <a class="btn btn-round btn-primary" href="dashboard?page={{ page }}&order={{ order }}" class="editar">{{ page }}</a>
+    {% endfor %}
+    <a class="btn btn-round btn-primary" href="dashboard?page={{ pagination.ultimo }}&order={{ order }}" class="editar">Ultimo</a>
+</div>
+<div class="row">
+    <form action="dashboard/dodelete" method="post" name="fBorrar" id="fBorrar" >
+        <input class="btn btn-danger" type="button" value="Borrar" data-toggle="modal" data-target="#confirm" />
+    </form> 
+    <a href="dashboard/insert" class="btn btn-success">Agregar Usuario</a>
+</div>
+

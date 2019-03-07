@@ -1,0 +1,52 @@
+{% extends 'base.twig' %}
+
+{% block head %}
+	<script src="assets/js/masonry.min.js" defer></script>
+	<script defer>
+		(function(){
+			$('.grid').masonry({
+			  columnWidth: 200,
+			  itemSelector: '.grid-item'
+			});
+		})();
+	</script>
+{% endblock %}
+
+{% block header %}
+	<header id="top">
+		
+		{% include '_nav.twig' %}
+		
+		<h1>Links</h1>
+
+	</header>
+{% endblock %}
+
+{% block content %}
+	<section>
+		<div class="info-header">
+			<p>
+				Linkin Park
+			</p>
+		</div>
+	</section>
+	<section>
+		<!-- Links -->
+		<div class="link-container grid">
+			
+			<!-- Link -->
+			{% for link in links %}
+				<!-- Project -->
+				<div class="link grid-item">
+					<h3>{{ link.comment }}</h3>
+					<div class="info-link">
+						<h5>By <a href="index/author/{{ project.author }}">{{ project.author }}</a></h5>
+						<a href="" class="btn btn-outline-success">See Here</a></button>
+						<a href="" class="btn btn-outline-info">See On Browser</a>
+					</div>
+				</div>
+			{% endfor %}
+			
+		</div>
+	</section>
+{% endblock %}

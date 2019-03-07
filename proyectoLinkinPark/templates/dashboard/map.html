@@ -1,0 +1,82 @@
+{% extends '_base.twig' %}
+
+{% block head %}
+    <link rel="stylesheet" href="../assets/vendor/jvectormap/jquery-jvectormap-2.0.3.css"/>
+    <script src="assets/bundles/jvectormap.bundle.js" defer></script><!-- JVectorMap Plugin Js -->
+    <script src="assets/vendor/jvectormap/jquery-jvectormap-world-mill-en.js" defer></script>
+    <script src="assets/vendor/jvectormap/jquery-jvectormap-in-mill.js" defer></script>       <!-- India Map Js -->
+    <script src="assets/vendor/jvectormap/jquery-jvectormap-us-aea-en.js" defer></script>     <!-- USA Map Js -->
+    <script src="assets/vendor/jvectormap/jquery-jvectormap-uk-mill-en.js" defer></script>    <!-- UK Map Js -->
+    <script src="assets/vendor/jvectormap/jquery-jvectormap-au-mill.js" defer></script>       <!-- Australia Map Js -->
+    
+    <script src="assets/bundles/mainscripts.bundle.js"defer></script>
+    <script src="assets/js/pages/maps/jvectormap.js" defer></script><!-- Custom Js -->
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="body">
+                        <div id="world-map-markers" class="jvector-map main-map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-md-12 col-lg-6">
+                <div class="card">
+                    <div class="header">
+                        <h2>India Map</h2>
+                    </div>
+                    <div class="body text-center">
+                        <div id="india" style="height: 400px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <div class="card">
+                    <div class="header">
+                        <h2>USA Map</h2>
+                    </div>
+                    <div class="body text-center">
+                        <div id="usa" style="height: 400px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <div class="card">
+                    <div class="header">
+                        <h2>UK Map</h2>
+                    </div>
+                    <div class="body text-center">
+                        <div id="uk" style="height: 400px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <div class="card">
+                    <div class="header">
+                        <h2>Australia Map</h2>
+                    </div>
+                    <div class="body text-center">
+                        <div id="australia" style="height: 400px"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-12 col-lg-13">
+                <div class="card">
+                    <div class="header">
+                        <h2>Spain Map</h2>
+                    </div>
+                    <div class="body text-center">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1336.8734636694167!2d-3.5917507839125142!3d37.16128560551201!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fca6107464e5%3A0x5cc395f96e47c0d9!2sIES+Zaid%C3%ADn+Vergeles!5e0!3m2!1ses!2ses!4v1548093595107" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
